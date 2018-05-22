@@ -37,6 +37,7 @@ class LoadingDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        // Default text message will be shown
         if loadingCtrl.getNumberOfGenerations() == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "noLoadingCell", for: indexPath)
             return cell
@@ -50,6 +51,7 @@ class LoadingDataSource: NSObject, UITableViewDataSource {
         cell.boardSizeY = generation.boardSizeY
         cell.tappedCells = generation.positions
         
+        //Setup Preview
         cell.setup()
         
         return cell
@@ -58,7 +60,7 @@ class LoadingDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            loadingCtrl.deleteRow(row: indexPath.row)
+            loadingCtrl.deleteGeneration(position: indexPath.row)
             
             if loadingCtrl.getNumberOfGenerations() == 0 {
                 tableView.reloadRows(at: [indexPath], with: .top)
@@ -68,5 +70,4 @@ class LoadingDataSource: NSObject, UITableViewDataSource {
             }
         }
     }
-
 }

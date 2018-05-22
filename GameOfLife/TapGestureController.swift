@@ -37,22 +37,17 @@ class TapGestureController: NSObject {
         let tappedCell = field.cells[key]!
         
         
-        //Cell ist schon ausgewählt und wird wieder abgewählt
+        // Cell has already been selected and gets deselected now
         if tappedCellKeys.contains(key) {
             
             tappedCellKeys.remove(at: tappedCellKeys.index(of: key)!)
             tappedCell.backgroundColor = .white
         }
-            //Wenn cell noch nicht ausgewählt oder wieder abgewählt wurde
+        // Cell hasn't been selected yet
         else {
-            
             tappedCellKeys.append(key)
             field.bringSubview(toFront: tappedCell)
             tappedCell.backgroundColor = cellBackGroundColor
         }
-    }
-    
-    func colorCells() {
-       
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class TutorialDataSource: NSObject, UICollectionViewDataSource {
     
-    var tutorialCtrl : TutorialController!
+    let tutorialCtrl : TutorialController = TutorialController()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tutorialCtrl.getNumberOfPages()

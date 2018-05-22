@@ -8,14 +8,14 @@
 
 import UIKit
 
-class TutorialController: NSObject {
+struct TutorialController {
     
     let pages : [(UIImage, String)] = [
         (#imageLiteral(resourceName: "setup"), "\n\n\"Customize Your Board\""),
         (#imageLiteral(resourceName: "initial"), "\n\n\"Select The Initial Generation By Tapping On The Cells\""),
         (#imageLiteral(resourceName: "zoom"), "\n\n\"Zoom In And Out\""),
         (#imageLiteral(resourceName: "loadSave"),"\n\n\"Load And Save Your Initial Generations\""),
-        (#imageLiteral(resourceName: "forward"), "\n\n\"Speed Up Or Slow Up The Evolution By Activating The Buttons\""),
+        (#imageLiteral(resourceName: "forward"), "\n\n\"Speed Up Or Slow Down The Evolution By Activating The Buttons\""),
         (#imageLiteral(resourceName: "pause"), "\n\n\"Double Tap To Pause The Evolution\""),
         (#imageLiteral(resourceName: "shopTutorial"), "\n\n\"Check Out The Shop To Improve Your Game Experience\"")
     ]

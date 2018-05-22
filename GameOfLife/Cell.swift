@@ -10,17 +10,16 @@ import UIKit
 
 class Cell: UIView {
     
-    //TODO: Könnte eventuell entfernt werden
-    var fieldPosition = [String : Int]()
+    //var fieldPosition = [String : Int]()
     
     var isAlive = false
     
     //Background color if alive
     var color = UIColor.black
     
-    var lifeWillChange = false
+    var stateWillChange = false
     
-    fileprivate var nextGenerationAlive = false
+    private var nextGenerationAlive = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,18 +37,11 @@ class Cell: UIView {
     }
     
     func setupForNextGeneration() {
-        
-        if isAlive == nextGenerationAlive {
-            lifeWillChange = false
-        }
-        else {
-            lifeWillChange = true
-        }
-        
+        stateWillChange = isAlive == nextGenerationAlive ? false : true
         isAlive = nextGenerationAlive
     }
     
-    func setAliveNextTurn(willBeAlive : Bool) {
+    func setStateNextTurn(willBeAlive : Bool) {
         nextGenerationAlive = willBeAlive
     }
     

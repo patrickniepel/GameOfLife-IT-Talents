@@ -19,6 +19,7 @@ class LoadingDelegate: NSObject, UITableViewDelegate {
         let nav = tableView.window?.rootViewController as! UINavigationController
         let topVC = nav.presentedViewController as! LoadingViewController
         
+        //Start loading the selected generation
         topVC.loadFromLoadingScreen(generation: generation)
     }
 

@@ -48,6 +48,7 @@ class LoadingViewController: UIViewController {
         closeButton.layer.cornerRadius = 10
     }
     
+    /** Loads chosen generation into the Initial Generation screen */
     func loadFromLoadingScreen(generation: Generation) {
         segueDelegate!.loadFromLoadingScreen(ctrl: self, generation: generation)
     }

@@ -8,6 +8,7 @@
 
 import UIKit
 
+/** Represents for the saved generations the user created  */
 class UserData: NSObject, NSCoding {
     
     static var sharedInstance = UserData()

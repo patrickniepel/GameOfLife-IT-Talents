@@ -12,6 +12,7 @@ class Field: UIView {
     
     var cellsPerRow = 0
     var cellsPerColumn = 0
-    var cells = [String : Cell]()
     
+    // Key like "x|y"
+    var cells = [String : Cell]()
 }

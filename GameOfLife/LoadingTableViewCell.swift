@@ -13,7 +13,6 @@ class LoadingTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var previewView: Field!
     
-    
     var fieldCtrl : FieldController!
     var boardSizeX : Int!
     var boardSizeY : Int!
@@ -27,6 +26,7 @@ class LoadingTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    /** Shows a little preview of the saved generation */
     func setup() {
         fieldCtrl = FieldController(fieldView: previewView)
         fieldCtrl.setup(cellsPerRow: boardSizeX, cellsPerColumn: boardSizeY, color: .black)

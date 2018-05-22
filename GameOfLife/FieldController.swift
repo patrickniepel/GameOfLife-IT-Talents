@@ -14,7 +14,7 @@ class FieldController: NSObject {
     var width : CGFloat  = 0
     var height : CGFloat = 0
     
-    var tmpCells : [Cell] = []
+    //var tmpCells : [Cell] = []
     var allCells : [Cell] = []
     
     var cellCtrl : CellController!
@@ -29,13 +29,12 @@ class FieldController: NSObject {
     }
     
     func setup(cellsPerRow: Int, cellsPerColumn: Int, color: UIColor) {
-        
         field.cellsPerRow = cellsPerRow
         field.cellsPerColumn = cellsPerColumn
         cellBackGroundColor = color
     }
     
-    /** Fills the game field with cells */
+    /** Fills the board with cells */
     func populateField() {
         
         let cellsPerRow = field.cellsPerRow
@@ -65,13 +64,14 @@ class FieldController: NSObject {
     func colorCells(positions: [String]) {
         
         for pos in positions {
-            field.cells[pos]?.backgroundColor = .black
+            field.cells[pos]?.backgroundColor = cellBackGroundColor
         }
     }
     
     /** Sets the next generation of cells */
     func updateField() {
         
+        // check cell states for next generation
         for j in 0..<field.cellsPerColumn {
             
             for i in 0..<field.cellsPerRow {
@@ -84,33 +84,30 @@ class FieldController: NSObject {
                 
                 //Tot und genau 3 nachbarn
                 if !field.cells[key]!.isAlive && aliveCounter == 3 {
-                    field.cells[key]?.setAliveNextTurn(willBeAlive: true)
+                    field.cells[key]?.setStateNextTurn(willBeAlive: true)
                 }
                 
                 //Lebend mit  weniger als 2 nachbarn
                 if field.cells[key]!.isAlive && aliveCounter < 2 {
-                    field.cells[key]?.setAliveNextTurn(willBeAlive: false)
+                    field.cells[key]?.setStateNextTurn(willBeAlive: false)
                 }
                 
                 //Lebend mit 2 oder 3 lebenden nachbarn
                 if field.cells[key]!.isAlive && (aliveCounter == 2 || aliveCounter == 3) {
-                    field.cells[key]?.setAliveNextTurn(willBeAlive: true)
+                    field.cells[key]?.setStateNextTurn(willBeAlive: true)
                 }
                 
                 //Lebend mit mehr als 3 nachbarn
                 if field.cells[key]!.isAlive && aliveCounter > 3 {
-                    field.cells[key]?.setAliveNextTurn(willBeAlive: false)
+                    field.cells[key]?.setStateNextTurn(willBeAlive: false)
                 }
             }
         }
         
-        for j in 0..<field.cellsPerColumn {
-            
-            for i in 0..<field.cellsPerRow {
-                
-                let key = "\(i)|\(j)"
-                field.cells[key]?.setupForNextGeneration()
-            }
+        // Commit changes for next generation
+        let allKeys = field.cells.keys
+        allKeys.forEach { key in
+            field.cells[key]?.setupForNextGeneration()
         }
         
         stepCounter += 1
@@ -123,7 +120,7 @@ class FieldController: NSObject {
         
         for cell in allCells {
             
-            if cell.lifeWillChange {
+            if cell.stateWillChange {
                 stayedTheSame = false
             }
         }
@@ -144,12 +141,12 @@ class FieldController: NSObject {
     }
     
     /** Sets the first generation after the field was created */
-    func setInitialGeneration(initialGeneration: [String]) {
+    func setInitialGeneration(initialGenerationPositions: [String]) {
         
-        for key in initialGeneration {
+        for pos in initialGenerationPositions {
             
-            field.cells[key]?.isAlive = true
-            field.cells[key]?.setAppearance()
+            field.cells[pos]?.isAlive = true
+            field.cells[pos]?.setAppearance()
         }
         
         allCells = Array(field.cells.values)

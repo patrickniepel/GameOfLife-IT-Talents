@@ -18,8 +18,8 @@ class LoadingController: NSObject {
         return UserData.sharedInstance.generations[row]
     }
     
-    func deleteRow(row: Int) {
-        UserData.sharedInstance.generations.remove(at: row)
+    func deleteGeneration(position: Int) {
+        UserData.sharedInstance.generations.remove(at: position)
         DataObjectPersistency().saveDataObject(items: UserData.sharedInstance)
     }
 

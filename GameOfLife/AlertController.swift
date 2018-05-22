@@ -22,8 +22,8 @@ class AlertController: NSObject {
                 generation.name = textField.text!
             }
             else {
-                let name = "Custom Generation"
-                generation.name = name
+                // Default name
+                generation.name = "Custom Generation"
             }
             PersistencyController().saveUserData(generation: generation)
             print("saved")

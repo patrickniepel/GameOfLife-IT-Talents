@@ -31,8 +31,6 @@ class TutorialViewController: UIViewController {
         dataSource = TutorialDataSource()
         delegate = TutorialDelegate()
         
-        dataSource.tutorialCtrl = tutorialCtrl
-        
         collectionView.dataSource = dataSource
         collectionView.delegate = delegate
         

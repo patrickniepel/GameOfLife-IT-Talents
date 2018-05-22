@@ -13,6 +13,8 @@ class Generation: NSObject, NSCoding {
     var name : String = ""
     var boardSizeX : Int = 0
     var boardSizeY : Int = 0
+    
+    // Entries like "x|y"
     var positions : [String] = []
     
     private let nameKey = "name"

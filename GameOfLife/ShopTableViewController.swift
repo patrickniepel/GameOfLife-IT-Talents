@@ -48,6 +48,7 @@ class ShopTableViewController: UITableViewController {
         }
     }
     
+    /** Changes button appearance when user purchased a product */
     @objc func handleButtonEnabling() {
         
         if PurchaseController().didUserPurchaseAdRemoval() {
@@ -93,11 +94,13 @@ class ShopTableViewController: UITableViewController {
 //        }
 //    }
     
+    /** User wants to remove the ad */
     @IBAction func removeAd(_ sender: UIButton) {
         print(removeAd.rawValue)
         storeManager.purchase(purchase: removeAd)
     }
     
+    /** User wants to purchase the board expansion */
     @IBAction func expandBoard(_ sender: UIButton) {
         storeManager.purchase(purchase: expandBoard)
     }

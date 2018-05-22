@@ -14,9 +14,10 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
     @IBOutlet weak var fieldView: Field!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stepsLabel: UILabel!
-    @IBOutlet weak var pasteLabel: UILabel!
+    @IBOutlet weak var paceLabel: UILabel!
     @IBOutlet weak var runningStatusLabel: UILabel!
     
+    // Interstitial Ad
     var interstitial : GADInterstitial!
     
     var fieldCtrl : FieldController!
@@ -29,7 +30,7 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
     
     var tapGesture : UITapGestureRecognizer!
     var currentPace = 4
-    var pastes : [Float] = [0.01, 0.1, 0.25, 0.5, 1, 2, 4]
+    var paces : [Float] = [0.01, 0.1, 0.25, 0.5, 1, 2, 4]
     
     var didLayoutSubviews = false
 
@@ -56,10 +57,11 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
             
             fieldView.layoutIfNeeded()
             
+            //Initialize and setup FieldController
             fieldCtrl = FieldController(fieldView: fieldView)
             fieldCtrl.setup(cellsPerRow: initialGeneration.boardSizeX, cellsPerColumn: initialGeneration.boardSizeY, color: cellBackGroundColorSetup)
             fieldCtrl.populateField()
-            fieldCtrl.setInitialGeneration(initialGeneration: initialGeneration.positions)
+            fieldCtrl.setInitialGeneration(initialGenerationPositions: initialGeneration.positions)
             
             startTimer()
             
@@ -75,7 +77,7 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
     
     private func setupBottomToolbar() {
         stepsLabel.text = "0 Step(s)"
-        pasteLabel.text = "x1"
+        paceLabel.text = "x1"
     }
     
     private func setupInterstitialAd() {
@@ -95,8 +97,8 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
     }
     
     func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: TimeInterval(pastes[currentPace]), target: self, selector: #selector(handleTimer), userInfo: nil, repeats: true)
-        //Timer keeps firing even when zooming
+        timer = Timer.scheduledTimer(timeInterval: TimeInterval(paces[currentPace]), target: self, selector: #selector(handleTimer), userInfo: nil, repeats: true)
+        //Timer keeps firing even while zooming
         RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
     }
     
@@ -154,16 +156,16 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
         self.navigationController?.popToRootViewController(animated: false)
     }
     
-    private func updatePasteLabel() {
-        let paste = 1 / pastes[currentPace]
-        print("Paste", paste)
+    private func updatePaceLabel() {
+        let pace = 1 / paces[currentPace]
+        print("Paste", pace)
         
-        if paste >= 1 {
-            let pasteInt = Int(paste * 1) / 1
-            pasteLabel.text = "x\(pasteInt)"
+        if pace >= 1 {
+            let paceInt = Int(pace * 1) / 1
+            paceLabel.text = "x\(paceInt)"
         }
         else {
-            pasteLabel.text = "x\(paste)"
+            paceLabel.text = "x\(pace)"
         }
     }
     
@@ -182,7 +184,7 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
         stepsLabel.text = "\(fieldCtrl.stepCounter - 1) Step(s)"
     }
     
-    /** User double tapped for pause or continue the game */
+    /** User double tapped to pause or continue the game */
     @objc func handleTap() {
         
         if !timer.isValid {
@@ -197,7 +199,7 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
     
     @IBAction func fastForward(_ sender: UIBarButtonItem) {
         
-        //Already at highest paste
+        //Already at highest pace
         if currentPace - 1 < 0 {
             return
         }
@@ -205,19 +207,19 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
         currentPace -= 1
         stopTimer()
         startTimer()
-        updatePasteLabel()
+        updatePaceLabel()
     }
     
     @IBAction func rewind(_ sender: UIBarButtonItem) {
         
-        if currentPace + 1 > pastes.count - 1 {
+        if currentPace + 1 > paces.count - 1 {
             return
         }
         //Slower
         currentPace += 1
         stopTimer()
         startTimer()
-        updatePasteLabel()
+        updatePaceLabel()
     }
     
     deinit {

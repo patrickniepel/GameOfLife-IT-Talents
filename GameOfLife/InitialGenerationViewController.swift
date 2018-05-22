@@ -69,22 +69,31 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
         scrollView.maximumZoomScale = 5
     }
     
+    // MARK: - SegueDelegates
+    
     func closeFromLoadingScreen(ctrl: LoadingViewController) {
         ctrl.dismiss(animated: true, completion: nil)
     }
     
     func loadFromLoadingScreen(ctrl: LoadingViewController, generation: Generation) {
         initialGeneration = generation
-        reloadViewWithGeneration()
+        reloadViewWithNewGeneration()
         
         ctrl.dismiss(animated: true, completion: nil)
     }
     
-    private func reloadViewWithGeneration() {
+    // --
+    
+    private func reloadViewWithNewGeneration() {
+        
+        // Remove already added CGRects as Cells
         removeSubviews()
+        
         cellsPerRowSetup = initialGeneration.boardSizeX
         cellsPerColumnSetup = initialGeneration.boardSizeY
         setupField()
+        
+        //Load positions of the loaded generation into the tappedCellKeys for correct further editing
         tapGestureCtrl.tappedCellKeys = initialGeneration.positions
         fieldCtrl.colorCells(positions: initialGeneration.positions)
     }
@@ -109,6 +118,7 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
     
     @IBAction func startGame(_ sender: UIBarButtonItem) {
         
+        //Cannot start the game if there are no cells selected
         if tapGestureCtrl.tappedCellKeys.count == 0 {
             showAlert()
         }
