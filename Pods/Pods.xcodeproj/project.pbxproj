@@ -1,0 +1,912 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		021DFEA494BEE9AFB1AE7AB19C4595FF /* InAppReceiptRefreshRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD213509A71A76069D023746E2DF420 /* InAppReceiptRefreshRequest.swift */; };
+		142ED7A81C3C764FD09F5F85A8115DDB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		3C0AC07F30C95007A56D365CA9EC6F8F /* SwiftyStoreKit+Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F2E7D57558BA496C21E6F54F77D31A /* SwiftyStoreKit+Types.swift */; };
+		42912DFB449E45F546EACC61BCA37F11 /* CompleteTransactionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A2043A9DBCEBE4A1434BF9A8B2352 /* CompleteTransactionsController.swift */; };
+		4968DF1E007BBB694B1FFFC4193C1303 /* PaymentQueueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17DBB88BBAE67668C2A34663253840D /* PaymentQueueController.swift */; };
+		49CA6FABF6E478AB18723321E56E93B0 /* Pods-GameOfLifeTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ABC17529E51FCD89D2B835615C4144EC /* Pods-GameOfLifeTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5DE7589D3F8F6CBCDB563256BBA0D01B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5EB95C86FF83B03BDDAD60514C1D8B69 /* SwiftyStoreKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C86A91E6AA5A1785C883FAC34177AD05 /* SwiftyStoreKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64BE5EC3C62895E585CF09D7F46C5708 /* RestorePurchasesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5F5D8284FA3686B43521150110DA14 /* RestorePurchasesController.swift */; };
+		6F7FD3D80EE098945E0B975FD8D01518 /* InAppReceiptVerificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E7EB005286DCE4B3A2034F44594C97 /* InAppReceiptVerificator.swift */; };
+		7B376893635B1B121872E169A1D5D5D0 /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41758814C86D4897B2ECDDC4126781D2 /* OS.swift */; };
+		7FF3785CD8F5FD5F866A0D50801D6588 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		90F8EF133EC8FA6EB94B6DB5B04F09F2 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63841D4E48B64306BE426C08EFDA7FE /* InAppReceipt.swift */; };
+		914F7644E8C9EA7FFC8494AD8A2C41A0 /* AppleReceiptValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B831058BE4012CFB763CF1148D017B /* AppleReceiptValidator.swift */; };
+		A92D90688E7E699D9A76A8449DF21BFE /* SwiftyStoreKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBAF3E795DB05411EB81B9F0436103F6 /* SwiftyStoreKit-dummy.m */; };
+		AF575D7CFDE7B68949B5538DC4E2595D /* SwiftyStoreKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39F2AFA22815BE47C2C552DA7FA9566 /* SwiftyStoreKit.swift */; };
+		B972D677AEA5D92F547F949854762177 /* Pods-GameOfLife-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC1610D37072EF59A0F71D3CF5492A1 /* Pods-GameOfLife-dummy.m */; };
+		C9743274D2E4B344B4DDC398D24DB319 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		CDE279743CC73AFBB4367C6BC67F71B5 /* InAppProductQueryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E75E3F3FCA86160A2868A4C029E12 /* InAppProductQueryRequest.swift */; };
+		CEE9B56C9F9C83ADC70A847EB1F70F8E /* PaymentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677D7921CCDCAEB30DE5141D7F5DC573 /* PaymentsController.swift */; };
+		D2CCDA172666F9B0E577F110DF34B802 /* ProductsInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91348E55F4E7BD0FC38DE5165FAE759A /* ProductsInfoController.swift */; };
+		DFA9A79FF13F442396AAF6F09A12F659 /* Pods-GameOfLifeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B65698384606B9323D9901389BFB149 /* Pods-GameOfLifeUITests-dummy.m */; };
+		E7BDC611E3083B8EEEC8E7C056C57675 /* Pods-GameOfLifeUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 74123E229190F28C2ED9FAA0AF84600F /* Pods-GameOfLifeUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA13206147091628D348A0A38CC1DEB4 /* SKProduct+LocalizedPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817C4E53637A8ED3464C6AA0C71F4DBF /* SKProduct+LocalizedPrice.swift */; };
+		F1B27B622BB68D685C65C4B373EA94E0 /* Pods-GameOfLifeTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74F902768BB63D6D98CCBA54A9D30592 /* Pods-GameOfLifeTests-dummy.m */; };
+		F6335DD08000317557A857F370E74532 /* Pods-GameOfLife-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0671917117662C7E39E80C45714690CD /* Pods-GameOfLife-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B05FA256C195920F68DA0DA18E2D7F43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39C2E309EEFCD4DD868CC022E1C47714;
+			remoteInfo = SwiftyStoreKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0671917117662C7E39E80C45714690CD /* Pods-GameOfLife-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GameOfLife-umbrella.h"; sourceTree = "<group>"; };
+		0AD213509A71A76069D023746E2DF420 /* InAppReceiptRefreshRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceiptRefreshRequest.swift; path = SwiftyStoreKit/InAppReceiptRefreshRequest.swift; sourceTree = "<group>"; };
+		1D5F5D8284FA3686B43521150110DA14 /* RestorePurchasesController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestorePurchasesController.swift; path = SwiftyStoreKit/RestorePurchasesController.swift; sourceTree = "<group>"; };
+		22DA5D0CD4C20A4F6C553EA7EBA38D42 /* Pods-GameOfLifeTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GameOfLifeTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		28F2E7D57558BA496C21E6F54F77D31A /* SwiftyStoreKit+Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SwiftyStoreKit+Types.swift"; path = "SwiftyStoreKit/SwiftyStoreKit+Types.swift"; sourceTree = "<group>"; };
+		28F531179E96EAA81F774380516BE5FC /* Pods-GameOfLifeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GameOfLifeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2A3461A1186413499D99D811E39761D4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3297FA741E577FF14A5EC04ABA3CEC95 /* Pods-GameOfLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GameOfLife.debug.xcconfig"; sourceTree = "<group>"; };
+		37BF94B5E7B6A67860AA92C27F3B0B69 /* Pods-GameOfLifeTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GameOfLifeTests.modulemap"; sourceTree = "<group>"; };
+		41758814C86D4897B2ECDDC4126781D2 /* OS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OS.swift; path = SwiftyStoreKit/OS.swift; sourceTree = "<group>"; };
+		465FDA71CE4F9919DBB96E84FE93D022 /* Pods-GameOfLife.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GameOfLife.modulemap"; sourceTree = "<group>"; };
+		4CE62C89E9B1164512865418EED888EE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E7B757A9B3A5B148067595DE63CE7F7 /* Pods_GameOfLifeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfLifeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		519FD73DEB1261DE4B12C944FF619786 /* SwiftyStoreKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-prefix.pch"; sourceTree = "<group>"; };
+		548D583774C77628A1A4B67DB65EA937 /* Pods-GameOfLifeUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GameOfLifeUITests-resources.sh"; sourceTree = "<group>"; };
+		55050913761310401070B85B6F7050B9 /* Pods-GameOfLife-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GameOfLife-acknowledgements.plist"; sourceTree = "<group>"; };
+		55E7EB005286DCE4B3A2034F44594C97 /* InAppReceiptVerificator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceiptVerificator.swift; path = SwiftyStoreKit/InAppReceiptVerificator.swift; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		677D7921CCDCAEB30DE5141D7F5DC573 /* PaymentsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentsController.swift; path = SwiftyStoreKit/PaymentsController.swift; sourceTree = "<group>"; };
+		712C59B6EEE2AB5596BC04793B36460A /* Pods-GameOfLifeTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GameOfLifeTests-resources.sh"; sourceTree = "<group>"; };
+		74123E229190F28C2ED9FAA0AF84600F /* Pods-GameOfLifeUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GameOfLifeUITests-umbrella.h"; sourceTree = "<group>"; };
+		74F902768BB63D6D98CCBA54A9D30592 /* Pods-GameOfLifeTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GameOfLifeTests-dummy.m"; sourceTree = "<group>"; };
+		77284679847BA043E6CE525A768575B5 /* SwiftyStoreKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyStoreKit.xcconfig; sourceTree = "<group>"; };
+		78C7AC7F5B0DFD29C061128EF38A0C4F /* Pods-GameOfLife-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GameOfLife-resources.sh"; sourceTree = "<group>"; };
+		7B233B831E44ACCE9890FEFD8596C40C /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		804FEB71BED492EAA313B9626A016A54 /* Pods-GameOfLifeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GameOfLifeTests.release.xcconfig"; sourceTree = "<group>"; };
+		817C4E53637A8ED3464C6AA0C71F4DBF /* SKProduct+LocalizedPrice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SKProduct+LocalizedPrice.swift"; path = "SwiftyStoreKit/SKProduct+LocalizedPrice.swift"; sourceTree = "<group>"; };
+		8E84A37770669C0C8F255E2FABC3265E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F03FB56820775AF16CB225728F2B890 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91348E55F4E7BD0FC38DE5165FAE759A /* ProductsInfoController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProductsInfoController.swift; path = SwiftyStoreKit/ProductsInfoController.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		970E75E3F3FCA86160A2868A4C029E12 /* InAppProductQueryRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppProductQueryRequest.swift; path = SwiftyStoreKit/InAppProductQueryRequest.swift; sourceTree = "<group>"; };
+		9B65698384606B9323D9901389BFB149 /* Pods-GameOfLifeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GameOfLifeUITests-dummy.m"; sourceTree = "<group>"; };
+		A17DBB88BBAE67668C2A34663253840D /* PaymentQueueController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaymentQueueController.swift; path = SwiftyStoreKit/PaymentQueueController.swift; sourceTree = "<group>"; };
+		A3B831058BE4012CFB763CF1148D017B /* AppleReceiptValidator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppleReceiptValidator.swift; path = SwiftyStoreKit/AppleReceiptValidator.swift; sourceTree = "<group>"; };
+		AAD737CCEB56F979C93D9AF69DCD0150 /* Pods-GameOfLife-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GameOfLife-acknowledgements.markdown"; sourceTree = "<group>"; };
+		ABC17529E51FCD89D2B835615C4144EC /* Pods-GameOfLifeTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GameOfLifeTests-umbrella.h"; sourceTree = "<group>"; };
+		AC48FF395F1114240F6F8A94E248AE29 /* SwiftyStoreKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyStoreKit.modulemap; sourceTree = "<group>"; };
+		B69D066D47F14921D17FC94826AADC39 /* Pods-GameOfLifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GameOfLifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B923A94E610D3E593B677AD79981AE3A /* Pods_GameOfLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBAF3E795DB05411EB81B9F0436103F6 /* SwiftyStoreKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyStoreKit-dummy.m"; sourceTree = "<group>"; };
+		BC42F9DAAB05760B242BA8A8A5D7413C /* Pods-GameOfLifeTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GameOfLifeTests-frameworks.sh"; sourceTree = "<group>"; };
+		BC9D002BE4083EC3387FBDB9A8D9319F /* Pods-GameOfLifeUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GameOfLifeUITests.modulemap"; sourceTree = "<group>"; };
+		BD2770480F7E06731B4C83ECB2EB0453 /* Pods-GameOfLifeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GameOfLifeUITests-frameworks.sh"; sourceTree = "<group>"; };
+		C78261E0EDADA1315954FAF454A61687 /* Pods_GameOfLifeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfLifeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C862BCFED1B8513EC8E51805B5D0CDD7 /* Pods-GameOfLifeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GameOfLifeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C86A91E6AA5A1785C883FAC34177AD05 /* SwiftyStoreKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyStoreKit-umbrella.h"; sourceTree = "<group>"; };
+		D65853CE00511E6053B585476A1A19AD /* Pods-GameOfLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GameOfLife.release.xcconfig"; sourceTree = "<group>"; };
+		D7A8F29786D31BC336412C1B56928330 /* Pods-GameOfLifeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GameOfLifeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D90BC35062A79B61B4D7195596955F69 /* Pods-GameOfLife-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GameOfLife-frameworks.sh"; sourceTree = "<group>"; };
+		E34A048BBB9D7B149F4B02D506EDE934 /* Pods-GameOfLifeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GameOfLifeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F0652C557A2A40D397525ABA43C7C0C7 /* Pods-GameOfLifeTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GameOfLifeTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F39A2043A9DBCEBE4A1434BF9A8B2352 /* CompleteTransactionsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompleteTransactionsController.swift; path = SwiftyStoreKit/CompleteTransactionsController.swift; sourceTree = "<group>"; };
+		F39F2AFA22815BE47C2C552DA7FA9566 /* SwiftyStoreKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyStoreKit.swift; path = SwiftyStoreKit/SwiftyStoreKit.swift; sourceTree = "<group>"; };
+		F63841D4E48B64306BE426C08EFDA7FE /* InAppReceipt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InAppReceipt.swift; path = SwiftyStoreKit/InAppReceipt.swift; sourceTree = "<group>"; };
+		FEC1610D37072EF59A0F71D3CF5492A1 /* Pods-GameOfLife-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GameOfLife-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09E6F12EA833BA6EF0A00364B868DC3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9743274D2E4B344B4DDC398D24DB319 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EA6D19748677C687E832A1CA2332327 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DE7589D3F8F6CBCDB563256BBA0D01B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1129AF134021E3E8CB6868DB89BE6F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				142ED7A81C3C764FD09F5F85A8115DDB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F894FD577CF5C39EFF12FFBFDF814314 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FF3785CD8F5FD5F866A0D50801D6588 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F68467CD1ED81AAA8CB9D83B86CECFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B923A94E610D3E593B677AD79981AE3A /* Pods_GameOfLife.framework */,
+				4E7B757A9B3A5B148067595DE63CE7F7 /* Pods_GameOfLifeTests.framework */,
+				C78261E0EDADA1315954FAF454A61687 /* Pods_GameOfLifeUITests.framework */,
+				7B233B831E44ACCE9890FEFD8596C40C /* SwiftyStoreKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6584775C5953664CF7D7B58B55D55643 /* SwiftyStoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				A3B831058BE4012CFB763CF1148D017B /* AppleReceiptValidator.swift */,
+				F39A2043A9DBCEBE4A1434BF9A8B2352 /* CompleteTransactionsController.swift */,
+				970E75E3F3FCA86160A2868A4C029E12 /* InAppProductQueryRequest.swift */,
+				F63841D4E48B64306BE426C08EFDA7FE /* InAppReceipt.swift */,
+				0AD213509A71A76069D023746E2DF420 /* InAppReceiptRefreshRequest.swift */,
+				55E7EB005286DCE4B3A2034F44594C97 /* InAppReceiptVerificator.swift */,
+				41758814C86D4897B2ECDDC4126781D2 /* OS.swift */,
+				A17DBB88BBAE67668C2A34663253840D /* PaymentQueueController.swift */,
+				677D7921CCDCAEB30DE5141D7F5DC573 /* PaymentsController.swift */,
+				91348E55F4E7BD0FC38DE5165FAE759A /* ProductsInfoController.swift */,
+				1D5F5D8284FA3686B43521150110DA14 /* RestorePurchasesController.swift */,
+				817C4E53637A8ED3464C6AA0C71F4DBF /* SKProduct+LocalizedPrice.swift */,
+				F39F2AFA22815BE47C2C552DA7FA9566 /* SwiftyStoreKit.swift */,
+				28F2E7D57558BA496C21E6F54F77D31A /* SwiftyStoreKit+Types.swift */,
+				FAF716A6B18390E69FB5668A416BA3EF /* Support Files */,
+			);
+			path = SwiftyStoreKit;
+			sourceTree = "<group>";
+		};
+		68D5982D130820E6EAA0785C5D73234D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6584775C5953664CF7D7B58B55D55643 /* SwiftyStoreKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6C79B41124A3873CADE38B494B375E79 /* Pods-GameOfLifeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8E84A37770669C0C8F255E2FABC3265E /* Info.plist */,
+				BC9D002BE4083EC3387FBDB9A8D9319F /* Pods-GameOfLifeUITests.modulemap */,
+				E34A048BBB9D7B149F4B02D506EDE934 /* Pods-GameOfLifeUITests-acknowledgements.markdown */,
+				28F531179E96EAA81F774380516BE5FC /* Pods-GameOfLifeUITests-acknowledgements.plist */,
+				9B65698384606B9323D9901389BFB149 /* Pods-GameOfLifeUITests-dummy.m */,
+				BD2770480F7E06731B4C83ECB2EB0453 /* Pods-GameOfLifeUITests-frameworks.sh */,
+				548D583774C77628A1A4B67DB65EA937 /* Pods-GameOfLifeUITests-resources.sh */,
+				74123E229190F28C2ED9FAA0AF84600F /* Pods-GameOfLifeUITests-umbrella.h */,
+				B69D066D47F14921D17FC94826AADC39 /* Pods-GameOfLifeUITests.debug.xcconfig */,
+				C862BCFED1B8513EC8E51805B5D0CDD7 /* Pods-GameOfLifeUITests.release.xcconfig */,
+			);
+			name = "Pods-GameOfLifeUITests";
+			path = "Target Support Files/Pods-GameOfLifeUITests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				68D5982D130820E6EAA0785C5D73234D /* Pods */,
+				4F68467CD1ED81AAA8CB9D83B86CECFB /* Products */,
+				AB199E388C6AAF69B34FB4654277971D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8C7542C7B111EF7669B0E7B4076D4487 /* Pods-GameOfLifeTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A3461A1186413499D99D811E39761D4 /* Info.plist */,
+				37BF94B5E7B6A67860AA92C27F3B0B69 /* Pods-GameOfLifeTests.modulemap */,
+				F0652C557A2A40D397525ABA43C7C0C7 /* Pods-GameOfLifeTests-acknowledgements.markdown */,
+				22DA5D0CD4C20A4F6C553EA7EBA38D42 /* Pods-GameOfLifeTests-acknowledgements.plist */,
+				74F902768BB63D6D98CCBA54A9D30592 /* Pods-GameOfLifeTests-dummy.m */,
+				BC42F9DAAB05760B242BA8A8A5D7413C /* Pods-GameOfLifeTests-frameworks.sh */,
+				712C59B6EEE2AB5596BC04793B36460A /* Pods-GameOfLifeTests-resources.sh */,
+				ABC17529E51FCD89D2B835615C4144EC /* Pods-GameOfLifeTests-umbrella.h */,
+				D7A8F29786D31BC336412C1B56928330 /* Pods-GameOfLifeTests.debug.xcconfig */,
+				804FEB71BED492EAA313B9626A016A54 /* Pods-GameOfLifeTests.release.xcconfig */,
+			);
+			name = "Pods-GameOfLifeTests";
+			path = "Target Support Files/Pods-GameOfLifeTests";
+			sourceTree = "<group>";
+		};
+		AB199E388C6AAF69B34FB4654277971D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9284AF3EA34D66E13B95C6E1F2F097A /* Pods-GameOfLife */,
+				8C7542C7B111EF7669B0E7B4076D4487 /* Pods-GameOfLifeTests */,
+				6C79B41124A3873CADE38B494B375E79 /* Pods-GameOfLifeUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E9284AF3EA34D66E13B95C6E1F2F097A /* Pods-GameOfLife */ = {
+			isa = PBXGroup;
+			children = (
+				8F03FB56820775AF16CB225728F2B890 /* Info.plist */,
+				465FDA71CE4F9919DBB96E84FE93D022 /* Pods-GameOfLife.modulemap */,
+				AAD737CCEB56F979C93D9AF69DCD0150 /* Pods-GameOfLife-acknowledgements.markdown */,
+				55050913761310401070B85B6F7050B9 /* Pods-GameOfLife-acknowledgements.plist */,
+				FEC1610D37072EF59A0F71D3CF5492A1 /* Pods-GameOfLife-dummy.m */,
+				D90BC35062A79B61B4D7195596955F69 /* Pods-GameOfLife-frameworks.sh */,
+				78C7AC7F5B0DFD29C061128EF38A0C4F /* Pods-GameOfLife-resources.sh */,
+				0671917117662C7E39E80C45714690CD /* Pods-GameOfLife-umbrella.h */,
+				3297FA741E577FF14A5EC04ABA3CEC95 /* Pods-GameOfLife.debug.xcconfig */,
+				D65853CE00511E6053B585476A1A19AD /* Pods-GameOfLife.release.xcconfig */,
+			);
+			name = "Pods-GameOfLife";
+			path = "Target Support Files/Pods-GameOfLife";
+			sourceTree = "<group>";
+		};
+		FAF716A6B18390E69FB5668A416BA3EF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4CE62C89E9B1164512865418EED888EE /* Info.plist */,
+				AC48FF395F1114240F6F8A94E248AE29 /* SwiftyStoreKit.modulemap */,
+				77284679847BA043E6CE525A768575B5 /* SwiftyStoreKit.xcconfig */,
+				BBAF3E795DB05411EB81B9F0436103F6 /* SwiftyStoreKit-dummy.m */,
+				519FD73DEB1261DE4B12C944FF619786 /* SwiftyStoreKit-prefix.pch */,
+				C86A91E6AA5A1785C883FAC34177AD05 /* SwiftyStoreKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyStoreKit";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		692F1D4B46ECF28D84523B06BE181F05 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7BDC611E3083B8EEEC8E7C056C57675 /* Pods-GameOfLifeUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4DBB356946D83633F54BA4C0224D7C5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49CA6FABF6E478AB18723321E56E93B0 /* Pods-GameOfLifeTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0B86017FD97C67E16F933E1432F4394 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6335DD08000317557A857F370E74532 /* Pods-GameOfLife-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA52CB93465BD9BB1725079427566E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EB95C86FF83B03BDDAD60514C1D8B69 /* SwiftyStoreKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2C7C9EF9AAAD48F9303F74379F972F89 /* Pods-GameOfLife */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6411C93BD87E15D9D90551D766AA788 /* Build configuration list for PBXNativeTarget "Pods-GameOfLife" */;
+			buildPhases = (
+				1EF536CE87966273B36528F98EA03ABB /* Sources */,
+				09E6F12EA833BA6EF0A00364B868DC3D /* Frameworks */,
+				B0B86017FD97C67E16F933E1432F4394 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				766334B574C6F667B57ABAC5DD73A4C5 /* PBXTargetDependency */,
+			);
+			name = "Pods-GameOfLife";
+			productName = "Pods-GameOfLife";
+			productReference = B923A94E610D3E593B677AD79981AE3A /* Pods_GameOfLife.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		39C2E309EEFCD4DD868CC022E1C47714 /* SwiftyStoreKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17D64AA4F94A1A3AC6F4A9773857304B /* Build configuration list for PBXNativeTarget "SwiftyStoreKit" */;
+			buildPhases = (
+				880D299C23EF1A0871521B97E83378C1 /* Sources */,
+				F894FD577CF5C39EFF12FFBFDF814314 /* Frameworks */,
+				CEA52CB93465BD9BB1725079427566E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyStoreKit;
+			productName = SwiftyStoreKit;
+			productReference = 7B233B831E44ACCE9890FEFD8596C40C /* SwiftyStoreKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		720F8F9DC31458661B0F3E35B7037341 /* Pods-GameOfLifeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 723531646976FB757AF35C20A94A3676 /* Build configuration list for PBXNativeTarget "Pods-GameOfLifeUITests" */;
+			buildPhases = (
+				14AA951EC9CD32A724CCEF1D96493808 /* Sources */,
+				7EA6D19748677C687E832A1CA2332327 /* Frameworks */,
+				692F1D4B46ECF28D84523B06BE181F05 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GameOfLifeUITests";
+			productName = "Pods-GameOfLifeUITests";
+			productReference = C78261E0EDADA1315954FAF454A61687 /* Pods_GameOfLifeUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D82BB855D153ACA1D0D525556B6F4F74 /* Pods-GameOfLifeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E050A610432EE9C8A691406A114B0057 /* Build configuration list for PBXNativeTarget "Pods-GameOfLifeTests" */;
+			buildPhases = (
+				F575D906B9C0E2394553DB97FA28B133 /* Sources */,
+				B1129AF134021E3E8CB6868DB89BE6F2 /* Frameworks */,
+				A4DBB356946D83633F54BA4C0224D7C5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GameOfLifeTests";
+			productName = "Pods-GameOfLifeTests";
+			productReference = 4E7B757A9B3A5B148067595DE63CE7F7 /* Pods_GameOfLifeTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0910;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 4F68467CD1ED81AAA8CB9D83B86CECFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C7C9EF9AAAD48F9303F74379F972F89 /* Pods-GameOfLife */,
+				D82BB855D153ACA1D0D525556B6F4F74 /* Pods-GameOfLifeTests */,
+				720F8F9DC31458661B0F3E35B7037341 /* Pods-GameOfLifeUITests */,
+				39C2E309EEFCD4DD868CC022E1C47714 /* SwiftyStoreKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14AA951EC9CD32A724CCEF1D96493808 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFA9A79FF13F442396AAF6F09A12F659 /* Pods-GameOfLifeUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF536CE87966273B36528F98EA03ABB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B972D677AEA5D92F547F949854762177 /* Pods-GameOfLife-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		880D299C23EF1A0871521B97E83378C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				914F7644E8C9EA7FFC8494AD8A2C41A0 /* AppleReceiptValidator.swift in Sources */,
+				42912DFB449E45F546EACC61BCA37F11 /* CompleteTransactionsController.swift in Sources */,
+				CDE279743CC73AFBB4367C6BC67F71B5 /* InAppProductQueryRequest.swift in Sources */,
+				90F8EF133EC8FA6EB94B6DB5B04F09F2 /* InAppReceipt.swift in Sources */,
+				021DFEA494BEE9AFB1AE7AB19C4595FF /* InAppReceiptRefreshRequest.swift in Sources */,
+				6F7FD3D80EE098945E0B975FD8D01518 /* InAppReceiptVerificator.swift in Sources */,
+				7B376893635B1B121872E169A1D5D5D0 /* OS.swift in Sources */,
+				4968DF1E007BBB694B1FFFC4193C1303 /* PaymentQueueController.swift in Sources */,
+				CEE9B56C9F9C83ADC70A847EB1F70F8E /* PaymentsController.swift in Sources */,
+				D2CCDA172666F9B0E577F110DF34B802 /* ProductsInfoController.swift in Sources */,
+				64BE5EC3C62895E585CF09D7F46C5708 /* RestorePurchasesController.swift in Sources */,
+				EA13206147091628D348A0A38CC1DEB4 /* SKProduct+LocalizedPrice.swift in Sources */,
+				3C0AC07F30C95007A56D365CA9EC6F8F /* SwiftyStoreKit+Types.swift in Sources */,
+				A92D90688E7E699D9A76A8449DF21BFE /* SwiftyStoreKit-dummy.m in Sources */,
+				AF575D7CFDE7B68949B5538DC4E2595D /* SwiftyStoreKit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F575D906B9C0E2394553DB97FA28B133 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1B27B622BB68D685C65C4B373EA94E0 /* Pods-GameOfLifeTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		766334B574C6F667B57ABAC5DD73A4C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyStoreKit;
+			target = 39C2E309EEFCD4DD868CC022E1C47714 /* SwiftyStoreKit */;
+			targetProxy = B05FA256C195920F68DA0DA18E2D7F43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		141BEC282D6D31C276697E49C0A49170 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3297FA741E577FF14A5EC04ABA3CEC95 /* Pods-GameOfLife.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GameOfLife/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GameOfLife/Pods-GameOfLife.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GameOfLife;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1F2CECD612A2DD5BF7DB96999A14627E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7A8F29786D31BC336412C1B56928330 /* Pods-GameOfLifeTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GameOfLifeTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GameOfLifeTests/Pods-GameOfLifeTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GameOfLifeTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3365AE5AD9F3F458FAE523A76BC6D0AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77284679847BA043E6CE525A768575B5 /* SwiftyStoreKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit.modulemap";
+				PRODUCT_NAME = SwiftyStoreKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5276205F84EE21F99DF5239B37F79217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C862BCFED1B8513EC8E51805B5D0CDD7 /* Pods-GameOfLifeUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GameOfLifeUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GameOfLifeUITests/Pods-GameOfLifeUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GameOfLifeUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		565CD528857BA756DD911A5F6A4F6161 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B69D066D47F14921D17FC94826AADC39 /* Pods-GameOfLifeUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GameOfLifeUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GameOfLifeUITests/Pods-GameOfLifeUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GameOfLifeUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		621AB785940626574F07364CB14760E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		7CD3C107767E2A74AF6287C5C5D0D425 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77284679847BA043E6CE525A768575B5 /* SwiftyStoreKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyStoreKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyStoreKit/SwiftyStoreKit.modulemap";
+				PRODUCT_NAME = SwiftyStoreKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B57C09D404C607DDE283C5C44183B2A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		B68E2B2FF38975CB30B1E88C0098C569 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D65853CE00511E6053B585476A1A19AD /* Pods-GameOfLife.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GameOfLife/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GameOfLife/Pods-GameOfLife.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GameOfLife;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C17039D8C4C4AA04CC90AAF64121A45A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 804FEB71BED492EAA313B9626A016A54 /* Pods-GameOfLifeTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GameOfLifeTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GameOfLifeTests/Pods-GameOfLifeTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_GameOfLifeTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17D64AA4F94A1A3AC6F4A9773857304B /* Build configuration list for PBXNativeTarget "SwiftyStoreKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3365AE5AD9F3F458FAE523A76BC6D0AD /* Debug */,
+				7CD3C107767E2A74AF6287C5C5D0D425 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B57C09D404C607DDE283C5C44183B2A1 /* Debug */,
+				621AB785940626574F07364CB14760E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		723531646976FB757AF35C20A94A3676 /* Build configuration list for PBXNativeTarget "Pods-GameOfLifeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				565CD528857BA756DD911A5F6A4F6161 /* Debug */,
+				5276205F84EE21F99DF5239B37F79217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E050A610432EE9C8A691406A114B0057 /* Build configuration list for PBXNativeTarget "Pods-GameOfLifeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F2CECD612A2DD5BF7DB96999A14627E /* Debug */,
+				C17039D8C4C4AA04CC90AAF64121A45A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6411C93BD87E15D9D90551D766AA788 /* Build configuration list for PBXNativeTarget "Pods-GameOfLife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				141BEC282D6D31C276697E49C0A49170 /* Debug */,
+				B68E2B2FF38975CB30B1E88C0098C569 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>756169575340-fihitac740be8cepr72rnb5lm4t9au7o.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.756169575340-fihitac740be8cepr72rnb5lm4t9au7o</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB7kwQovsl6d1S3E8umgwW3_MYa4kIOIqE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>756169575340</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>de.patrickniepel.GameOfLife</string>
+	<key>PROJECT_ID</key>
+	<string>gameoflifead</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gameoflifead.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:756169575340:ios:02309235a6a5dbbe</string>
+	<key>DATABASE_URL</key>
+	<string>https://gameoflifead.firebaseio.com</string>
+</dict>
+</plist>

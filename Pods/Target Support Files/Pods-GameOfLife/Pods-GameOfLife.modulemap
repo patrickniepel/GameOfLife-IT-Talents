@@ -1,0 +1,6 @@
+framework module Pods_GameOfLife {
+  umbrella header "Pods-GameOfLife-umbrella.h"
+
+  export *
+  module * { export * }
+}

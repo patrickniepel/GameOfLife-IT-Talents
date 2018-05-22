@@ -7,13 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D6C2271A317F080EE964850 /* Pods_GameOfLifeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3117DC98ABFB514C9DF670 /* Pods_GameOfLifeUITests.framework */; };
+		48483EA14812CAD11255A8EA /* Pods_GameOfLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E95C7EEAF9D7C030427C2F /* Pods_GameOfLife.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		A312FA3C1FC0484500CE3ED9 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A312FA3B1FC0484500CE3ED9 /* LoadingViewController.swift */; };
+		A312FA3E1FC0485500CE3ED9 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A312FA3D1FC0485500CE3ED9 /* LoadingTableViewCell.swift */; };
+		A312FA401FC0486A00CE3ED9 /* LoadingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A312FA3F1FC0486A00CE3ED9 /* LoadingDataSource.swift */; };
+		A312FA421FC0487800CE3ED9 /* LoadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A312FA411FC0487800CE3ED9 /* LoadingDelegate.swift */; };
+		A312FA441FC04E0700CE3ED9 /* LoadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A312FA431FC04E0700CE3ED9 /* LoadingController.swift */; };
+		A31E0F981FAA34C3002C5D5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A31E0F971FAA34C3002C5D5D /* GoogleService-Info.plist */; };
+		A31E0F9A1FAA34D3002C5D5D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31E0F991FAA34D3002C5D5D /* GoogleMobileAds.framework */; };
+		A32990DD1FAA568B00E147B9 /* TutorialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32990DC1FAA568B00E147B9 /* TutorialCollectionViewCell.swift */; };
+		A32990DF1FAA56A200E147B9 /* TutorialDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32990DE1FAA56A200E147B9 /* TutorialDataSource.swift */; };
+		A32990E11FAA56C300E147B9 /* TutorialDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32990E01FAA56C300E147B9 /* TutorialDelegate.swift */; };
+		A32990E31FAA56DC00E147B9 /* TutorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32990E21FAA56DC00E147B9 /* TutorialController.swift */; };
 		A35663671F656A1D0070410E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35663661F656A1D0070410E /* AppDelegate.swift */; };
-		A35663691F656A1D0070410E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35663681F656A1D0070410E /* ViewController.swift */; };
 		A356636C1F656A1D0070410E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A356636A1F656A1D0070410E /* Main.storyboard */; };
 		A356636E1F656A1D0070410E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A356636D1F656A1D0070410E /* Assets.xcassets */; };
 		A35663711F656A1D0070410E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A356636F1F656A1D0070410E /* LaunchScreen.storyboard */; };
 		A356637C1F656A1D0070410E /* GameOfLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A356637B1F656A1D0070410E /* GameOfLifeTests.swift */; };
 		A35663871F656A1D0070410E /* GameOfLifeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35663861F656A1D0070410E /* GameOfLifeUITests.swift */; };
+		A35663951F656A4A0070410E /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35663941F656A4A0070410E /* MenuViewController.swift */; };
+		A35663971F656A7C0070410E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35663961F656A7C0070410E /* AboutViewController.swift */; };
+		A35663991F656AB90070410E /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35663981F656AB90070410E /* SetupViewController.swift */; };
+		A356639B1F656AC50070410E /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A356639A1F656AC50070410E /* FieldViewController.swift */; };
+		A356639D1F6570D90070410E /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = A356639C1F6570D90070410E /* Field.swift */; };
+		A356639F1F6570E10070410E /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A356639E1F6570E10070410E /* Cell.swift */; };
+		A35663A11F6570EE0070410E /* FieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35663A01F6570ED0070410E /* FieldController.swift */; };
+		A35FC93F1FBF37A000C20C73 /* PersistencyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35FC93E1FBF37A000C20C73 /* PersistencyController.swift */; };
+		A35FC9411FBF37CB00C20C73 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35FC9401FBF37CB00C20C73 /* UserData.swift */; };
+		A35FC9431FBF37D800C20C73 /* DataObjectPersistency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35FC9421FBF37D800C20C73 /* DataObjectPersistency.swift */; };
+		A35FC9451FBF37E000C20C73 /* Generation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35FC9441FBF37E000C20C73 /* Generation.swift */; };
+		A35FC9471FBF3CA300C20C73 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35FC9461FBF3CA300C20C73 /* AlertController.swift */; };
+		A373C69E1FAB7F24003756BF /* NetworkActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373C69D1FAB7F24003756BF /* NetworkActivityIndicatorManager.swift */; };
+		A373C6A01FABBC7F003756BF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A373C69F1FABBC7F003756BF /* StoreKit.framework */; };
+		A37886911F658BFF001C0270 /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37886901F658BFF001C0270 /* CellController.swift */; };
+		A392CF061FB249140056C4DD /* ShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392CF051FB249140056C4DD /* ShopTableViewController.swift */; };
+		A3B507971F68131700D8C823 /* InitialGenerationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B507961F68131700D8C823 /* InitialGenerationViewController.swift */; };
+		A3B5079F1F6830E200D8C823 /* TapGestureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B5079E1F6830E200D8C823 /* TapGestureController.swift */; };
+		A3B507A11F6832BD00D8C823 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B507A01F6832BD00D8C823 /* Delegate.swift */; };
+		A3B507A31F6832CE00D8C823 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B507A21F6832CE00D8C823 /* DataSource.swift */; };
+		A3E0A1B51FAA50E000EA2BA6 /* PurchaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E0A1B41FAA50E000EA2BA6 /* PurchaseController.swift */; };
+		A3E0A1B81FAA535A00EA2BA6 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E0A1B71FAA535A00EA2BA6 /* TutorialViewController.swift */; };
+		A3E0F9041FA7BD6E0058E8BB /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3E0F9031FA7BD6E0058E8BB /* CaviarDreams.ttf */; };
+		A3E5C7C51FA2539700787F5B /* KOMTXTT_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3E5C7C31FA2539500787F5B /* KOMTXTT_.ttf */; };
+		A3E5C7C61FA2539700787F5B /* KOMTXTB_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3E5C7C41FA2539600787F5B /* KOMTXTB_.ttf */; };
+		A3E5C7C91FA2541500787F5B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E5C7C81FA2541500787F5B /* Extensions.swift */; };
+		A3F4BC851FACB7D9002D524F /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F4BC841FACB7D9002D524F /* StoreManager.swift */; };
+		BBC9EF090EEBEDCC5F06047D /* Pods_GameOfLifeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9408D90FB0C2D69A8F0D7F95 /* Pods_GameOfLifeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +74,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30B329B9741938D3822D588D /* Pods-GameOfLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfLife.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfLife/Pods-GameOfLife.debug.xcconfig"; sourceTree = "<group>"; };
+		441FA01B815D8FC7D35F0E99 /* Pods-GameOfLifeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfLifeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfLifeUITests/Pods-GameOfLifeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4F30B6CE707327BF20F6BD83 /* Pods-GameOfLifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfLifeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfLifeUITests/Pods-GameOfLifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		66E95C7EEAF9D7C030427C2F /* Pods_GameOfLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		699E17464DB830F97B31CA30 /* Pods-GameOfLifeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfLifeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfLifeTests/Pods-GameOfLifeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9408D90FB0C2D69A8F0D7F95 /* Pods_GameOfLifeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfLifeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A312FA3B1FC0484500CE3ED9 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		A312FA3D1FC0485500CE3ED9 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		A312FA3F1FC0486A00CE3ED9 /* LoadingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDataSource.swift; sourceTree = "<group>"; };
+		A312FA411FC0487800CE3ED9 /* LoadingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDelegate.swift; sourceTree = "<group>"; };
+		A312FA431FC04E0700CE3ED9 /* LoadingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingController.swift; sourceTree = "<group>"; };
+		A31E0F971FAA34C3002C5D5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A31E0F991FAA34D3002C5D5D /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		A32990DC1FAA568B00E147B9 /* TutorialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCollectionViewCell.swift; sourceTree = "<group>"; };
+		A32990DE1FAA56A200E147B9 /* TutorialDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialDataSource.swift; sourceTree = "<group>"; };
+		A32990E01FAA56C300E147B9 /* TutorialDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialDelegate.swift; sourceTree = "<group>"; };
+		A32990E21FAA56DC00E147B9 /* TutorialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialController.swift; sourceTree = "<group>"; };
 		A35663631F656A1D0070410E /* GameOfLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A35663661F656A1D0070410E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A35663681F656A1D0070410E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A356636B1F656A1D0070410E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A356636D1F656A1D0070410E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A35663701F656A1D0070410E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +103,36 @@
 		A35663821F656A1D0070410E /* GameOfLifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameOfLifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A35663861F656A1D0070410E /* GameOfLifeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLifeUITests.swift; sourceTree = "<group>"; };
 		A35663881F656A1D0070410E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A35663941F656A4A0070410E /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		A35663961F656A7C0070410E /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		A35663981F656AB90070410E /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		A356639A1F656AC50070410E /* FieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
+		A356639C1F6570D90070410E /* Field.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		A356639E1F6570E10070410E /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		A35663A01F6570ED0070410E /* FieldController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldController.swift; sourceTree = "<group>"; };
+		A35FC93E1FBF37A000C20C73 /* PersistencyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyController.swift; sourceTree = "<group>"; };
+		A35FC9401FBF37CB00C20C73 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		A35FC9421FBF37D800C20C73 /* DataObjectPersistency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataObjectPersistency.swift; sourceTree = "<group>"; };
+		A35FC9441FBF37E000C20C73 /* Generation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generation.swift; sourceTree = "<group>"; };
+		A35FC9461FBF3CA300C20C73 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		A373C69D1FAB7F24003756BF /* NetworkActivityIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorManager.swift; sourceTree = "<group>"; };
+		A373C69F1FABBC7F003756BF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A37886901F658BFF001C0270 /* CellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
+		A392CF051FB249140056C4DD /* ShopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableViewController.swift; sourceTree = "<group>"; };
+		A3B507961F68131700D8C823 /* InitialGenerationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialGenerationViewController.swift; sourceTree = "<group>"; };
+		A3B5079E1F6830E200D8C823 /* TapGestureController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapGestureController.swift; sourceTree = "<group>"; };
+		A3B507A01F6832BD00D8C823 /* Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		A3B507A21F6832CE00D8C823 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		A3E0A1B41FAA50E000EA2BA6 /* PurchaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseController.swift; sourceTree = "<group>"; };
+		A3E0A1B71FAA535A00EA2BA6 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		A3E0F9031FA7BD6E0058E8BB /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
+		A3E5C7C31FA2539500787F5B /* KOMTXTT_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KOMTXTT_.ttf; sourceTree = "<group>"; };
+		A3E5C7C41FA2539600787F5B /* KOMTXTB_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KOMTXTB_.ttf; sourceTree = "<group>"; };
+		A3E5C7C81FA2541500787F5B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A3F4BC841FACB7D9002D524F /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		C50CC52EE677EFA4BD481021 /* Pods-GameOfLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfLife.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfLife/Pods-GameOfLife.release.xcconfig"; sourceTree = "<group>"; };
+		F148813FCC4C16ED62ADE54C /* Pods-GameOfLifeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfLifeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfLifeTests/Pods-GameOfLifeTests.release.xcconfig"; sourceTree = "<group>"; };
+		FA3117DC98ABFB514C9DF670 /* Pods_GameOfLifeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfLifeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +140,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A373C6A01FABBC7F003756BF /* StoreKit.framework in Frameworks */,
+				A31E0F9A1FAA34D3002C5D5D /* GoogleMobileAds.framework in Frameworks */,
+				48483EA14812CAD11255A8EA /* Pods_GameOfLife.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC9EF090EEBEDCC5F06047D /* Pods_GameOfLifeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +158,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6C2271A317F080EE964850 /* Pods_GameOfLifeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		325813F41299E83E3B8E4F7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30B329B9741938D3822D588D /* Pods-GameOfLife.debug.xcconfig */,
+				C50CC52EE677EFA4BD481021 /* Pods-GameOfLife.release.xcconfig */,
+				699E17464DB830F97B31CA30 /* Pods-GameOfLifeTests.debug.xcconfig */,
+				F148813FCC4C16ED62ADE54C /* Pods-GameOfLifeTests.release.xcconfig */,
+				4F30B6CE707327BF20F6BD83 /* Pods-GameOfLifeUITests.debug.xcconfig */,
+				441FA01B815D8FC7D35F0E99 /* Pods-GameOfLifeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A06D457D66680BDC5526D3FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A373C69F1FABBC7F003756BF /* StoreKit.framework */,
+				66E95C7EEAF9D7C030427C2F /* Pods_GameOfLife.framework */,
+				9408D90FB0C2D69A8F0D7F95 /* Pods_GameOfLifeTests.framework */,
+				FA3117DC98ABFB514C9DF670 /* Pods_GameOfLifeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A356635A1F656A1D0070410E = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +196,8 @@
 				A356637A1F656A1D0070410E /* GameOfLifeTests */,
 				A35663851F656A1D0070410E /* GameOfLifeUITests */,
 				A35663641F656A1D0070410E /* Products */,
+				325813F41299E83E3B8E4F7A /* Pods */,
+				A06D457D66680BDC5526D3FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +214,18 @@
 		A35663651F656A1D0070410E /* GameOfLife */ = {
 			isa = PBXGroup;
 			children = (
+				A31E0F991FAA34D3002C5D5D /* GoogleMobileAds.framework */,
+				A31E0F971FAA34C3002C5D5D /* GoogleService-Info.plist */,
+				A3E5C7C71FA2540800787F5B /* Extensions */,
+				A3E0A1B31FAA50CB00EA2BA6 /* Purchase */,
+				A3B507981F6813B600D8C823 /* Menu */,
+				A3E0A1B61FAA534500EA2BA6 /* Tutorial */,
+				A3B507991F6813BA00D8C823 /* Setup */,
+				A3B5079A1F6813C000D8C823 /* InitialGeneration */,
+				A3B5079B1F6813D200D8C823 /* Field */,
+				A35FC93D1FBF376A00C20C73 /* Persistency */,
+				A3E5C7C21FA2535800787F5B /* Resources */,
 				A35663661F656A1D0070410E /* AppDelegate.swift */,
-				A35663681F656A1D0070410E /* ViewController.swift */,
 				A356636A1F656A1D0070410E /* Main.storyboard */,
 				A356636D1F656A1D0070410E /* Assets.xcassets */,
 				A356636F1F656A1D0070410E /* LaunchScreen.storyboard */,
@@ -125,6 +252,112 @@
 			path = GameOfLifeUITests;
 			sourceTree = "<group>";
 		};
+		A35FC93D1FBF376A00C20C73 /* Persistency */ = {
+			isa = PBXGroup;
+			children = (
+				A35FC93E1FBF37A000C20C73 /* PersistencyController.swift */,
+				A35FC9401FBF37CB00C20C73 /* UserData.swift */,
+				A35FC9421FBF37D800C20C73 /* DataObjectPersistency.swift */,
+				A35FC9441FBF37E000C20C73 /* Generation.swift */,
+			);
+			name = Persistency;
+			sourceTree = "<group>";
+		};
+		A35FC94A1FBF4CC600C20C73 /* LoadGeneration */ = {
+			isa = PBXGroup;
+			children = (
+				A312FA3B1FC0484500CE3ED9 /* LoadingViewController.swift */,
+				A312FA3D1FC0485500CE3ED9 /* LoadingTableViewCell.swift */,
+				A312FA3F1FC0486A00CE3ED9 /* LoadingDataSource.swift */,
+				A312FA411FC0487800CE3ED9 /* LoadingDelegate.swift */,
+				A312FA431FC04E0700CE3ED9 /* LoadingController.swift */,
+			);
+			name = LoadGeneration;
+			sourceTree = "<group>";
+		};
+		A3B507981F6813B600D8C823 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				A35663941F656A4A0070410E /* MenuViewController.swift */,
+				A35663961F656A7C0070410E /* AboutViewController.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		A3B507991F6813BA00D8C823 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				A35663981F656AB90070410E /* SetupViewController.swift */,
+				A3B507A01F6832BD00D8C823 /* Delegate.swift */,
+				A3B507A21F6832CE00D8C823 /* DataSource.swift */,
+			);
+			name = Setup;
+			sourceTree = "<group>";
+		};
+		A3B5079A1F6813C000D8C823 /* InitialGeneration */ = {
+			isa = PBXGroup;
+			children = (
+				A35FC94A1FBF4CC600C20C73 /* LoadGeneration */,
+				A3B507961F68131700D8C823 /* InitialGenerationViewController.swift */,
+				A3B5079E1F6830E200D8C823 /* TapGestureController.swift */,
+				A35FC9461FBF3CA300C20C73 /* AlertController.swift */,
+			);
+			name = InitialGeneration;
+			sourceTree = "<group>";
+		};
+		A3B5079B1F6813D200D8C823 /* Field */ = {
+			isa = PBXGroup;
+			children = (
+				A356639A1F656AC50070410E /* FieldViewController.swift */,
+				A37886901F658BFF001C0270 /* CellController.swift */,
+				A35663A01F6570ED0070410E /* FieldController.swift */,
+				A356639C1F6570D90070410E /* Field.swift */,
+				A356639E1F6570E10070410E /* Cell.swift */,
+			);
+			name = Field;
+			sourceTree = "<group>";
+		};
+		A3E0A1B31FAA50CB00EA2BA6 /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				A3E0A1B41FAA50E000EA2BA6 /* PurchaseController.swift */,
+				A373C69D1FAB7F24003756BF /* NetworkActivityIndicatorManager.swift */,
+				A3F4BC841FACB7D9002D524F /* StoreManager.swift */,
+				A392CF051FB249140056C4DD /* ShopTableViewController.swift */,
+			);
+			name = Purchase;
+			sourceTree = "<group>";
+		};
+		A3E0A1B61FAA534500EA2BA6 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				A3E0A1B71FAA535A00EA2BA6 /* TutorialViewController.swift */,
+				A32990DC1FAA568B00E147B9 /* TutorialCollectionViewCell.swift */,
+				A32990DE1FAA56A200E147B9 /* TutorialDataSource.swift */,
+				A32990E01FAA56C300E147B9 /* TutorialDelegate.swift */,
+				A32990E21FAA56DC00E147B9 /* TutorialController.swift */,
+			);
+			name = Tutorial;
+			sourceTree = "<group>";
+		};
+		A3E5C7C21FA2535800787F5B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3E0F9031FA7BD6E0058E8BB /* CaviarDreams.ttf */,
+				A3E5C7C41FA2539600787F5B /* KOMTXTB_.ttf */,
+				A3E5C7C31FA2539500787F5B /* KOMTXTT_.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A3E5C7C71FA2540800787F5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A3E5C7C81FA2541500787F5B /* Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +365,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A356638B1F656A1D0070410E /* Build configuration list for PBXNativeTarget "GameOfLife" */;
 			buildPhases = (
+				169C3B09D6C68D5A83E6994B /* [CP] Check Pods Manifest.lock */,
 				A356635F1F656A1D0070410E /* Sources */,
 				A35663601F656A1D0070410E /* Frameworks */,
 				A35663611F656A1D0070410E /* Resources */,
+				F26A3E1728E9E7571E34A742 /* [CP] Embed Pods Frameworks */,
+				45535954DFAFADC56E7296FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +385,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A356638E1F656A1D0070410E /* Build configuration list for PBXNativeTarget "GameOfLifeTests" */;
 			buildPhases = (
+				66120BDCD43716925AC0EA4E /* [CP] Check Pods Manifest.lock */,
 				A35663731F656A1D0070410E /* Sources */,
 				A35663741F656A1D0070410E /* Frameworks */,
 				A35663751F656A1D0070410E /* Resources */,
+				E9FC91B136CDB0A44D516E0F /* [CP] Embed Pods Frameworks */,
+				4790729B4F98E3815E5B73A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +406,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A35663911F656A1D0070410E /* Build configuration list for PBXNativeTarget "GameOfLifeUITests" */;
 			buildPhases = (
+				20C12AFBB669C64E8A3CF8CB /* [CP] Check Pods Manifest.lock */,
 				A356637E1F656A1D0070410E /* Sources */,
 				A356637F1F656A1D0070410E /* Frameworks */,
 				A35663801F656A1D0070410E /* Resources */,
+				C85A711F7D75A57D285F8370 /* [CP] Embed Pods Frameworks */,
+				EE60490EA4FA0F0155C3FC32 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,13 +430,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Patrick Niepel";
 				TargetAttributes = {
 					A35663621F656A1D0070410E = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 6C2B5VUSRK;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					A35663761F656A1D0070410E = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -235,9 +482,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E5C7C61FA2539700787F5B /* KOMTXTB_.ttf in Resources */,
 				A35663711F656A1D0070410E /* LaunchScreen.storyboard in Resources */,
+				A3E0F9041FA7BD6E0058E8BB /* CaviarDreams.ttf in Resources */,
 				A356636E1F656A1D0070410E /* Assets.xcassets in Resources */,
+				A3E5C7C51FA2539700787F5B /* KOMTXTT_.ttf in Resources */,
 				A356636C1F656A1D0070410E /* Main.storyboard in Resources */,
+				A31E0F981FAA34C3002C5D5D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,13 +508,194 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		169C3B09D6C68D5A83E6994B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameOfLife-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20C12AFBB669C64E8A3CF8CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameOfLifeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45535954DFAFADC56E7296FA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameOfLife/Pods-GameOfLife-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4790729B4F98E3815E5B73A3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameOfLifeTests/Pods-GameOfLifeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66120BDCD43716925AC0EA4E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameOfLifeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C85A711F7D75A57D285F8370 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameOfLifeUITests/Pods-GameOfLifeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9FC91B136CDB0A44D516E0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameOfLifeTests/Pods-GameOfLifeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE60490EA4FA0F0155C3FC32 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameOfLifeUITests/Pods-GameOfLifeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F26A3E1728E9E7571E34A742 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GameOfLife/Pods-GameOfLife-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameOfLife/Pods-GameOfLife-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A356635F1F656A1D0070410E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A35663691F656A1D0070410E /* ViewController.swift in Sources */,
+				A3B507A11F6832BD00D8C823 /* Delegate.swift in Sources */,
+				A3F4BC851FACB7D9002D524F /* StoreManager.swift in Sources */,
+				A37886911F658BFF001C0270 /* CellController.swift in Sources */,
+				A312FA441FC04E0700CE3ED9 /* LoadingController.swift in Sources */,
+				A312FA3C1FC0484500CE3ED9 /* LoadingViewController.swift in Sources */,
+				A35FC9411FBF37CB00C20C73 /* UserData.swift in Sources */,
+				A35FC9471FBF3CA300C20C73 /* AlertController.swift in Sources */,
+				A35FC93F1FBF37A000C20C73 /* PersistencyController.swift in Sources */,
+				A3B5079F1F6830E200D8C823 /* TapGestureController.swift in Sources */,
+				A32990E31FAA56DC00E147B9 /* TutorialController.swift in Sources */,
+				A312FA421FC0487800CE3ED9 /* LoadingDelegate.swift in Sources */,
+				A3B507A31F6832CE00D8C823 /* DataSource.swift in Sources */,
+				A373C69E1FAB7F24003756BF /* NetworkActivityIndicatorManager.swift in Sources */,
+				A35663A11F6570EE0070410E /* FieldController.swift in Sources */,
+				A35663991F656AB90070410E /* SetupViewController.swift in Sources */,
+				A32990DF1FAA56A200E147B9 /* TutorialDataSource.swift in Sources */,
+				A32990DD1FAA568B00E147B9 /* TutorialCollectionViewCell.swift in Sources */,
+				A35663971F656A7C0070410E /* AboutViewController.swift in Sources */,
+				A35FC9431FBF37D800C20C73 /* DataObjectPersistency.swift in Sources */,
+				A3E0A1B51FAA50E000EA2BA6 /* PurchaseController.swift in Sources */,
+				A35FC9451FBF37E000C20C73 /* Generation.swift in Sources */,
+				A356639F1F6570E10070410E /* Cell.swift in Sources */,
+				A312FA401FC0486A00CE3ED9 /* LoadingDataSource.swift in Sources */,
+				A312FA3E1FC0485500CE3ED9 /* LoadingTableViewCell.swift in Sources */,
+				A356639D1F6570D90070410E /* Field.swift in Sources */,
+				A3E0A1B81FAA535A00EA2BA6 /* TutorialViewController.swift in Sources */,
+				A392CF061FB249140056C4DD /* ShopTableViewController.swift in Sources */,
+				A356639B1F656AC50070410E /* FieldViewController.swift in Sources */,
+				A32990E11FAA56C300E147B9 /* TutorialDelegate.swift in Sources */,
+				A3B507971F68131700D8C823 /* InitialGenerationViewController.swift in Sources */,
 				A35663671F656A1D0070410E /* AppDelegate.swift in Sources */,
+				A35663951F656A4A0070410E /* MenuViewController.swift in Sources */,
+				A3E5C7C91FA2541500787F5B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +760,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -336,7 +770,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -378,7 +816,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -386,7 +826,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -413,32 +857,49 @@
 		};
 		A356638C1F656A1D0070410E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30B329B9741938D3822D588D /* Pods-GameOfLife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6C2B5VUSRK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/**",
+				);
 				INFOPLIST_FILE = GameOfLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.patrickniepel.GameOfLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		A356638D1F656A1D0070410E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C50CC52EE677EFA4BD481021 /* Pods-GameOfLife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6C2B5VUSRK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/**",
+				);
 				INFOPLIST_FILE = GameOfLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.patrickniepel.GameOfLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		A356638F1F656A1D0070410E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 699E17464DB830F97B31CA30 /* Pods-GameOfLifeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +915,7 @@
 		};
 		A35663901F656A1D0070410E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F148813FCC4C16ED62ADE54C /* Pods-GameOfLifeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +931,7 @@
 		};
 		A35663921F656A1D0070410E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F30B6CE707327BF20F6BD83 /* Pods-GameOfLifeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6C2B5VUSRK;
@@ -483,6 +946,7 @@
 		};
 		A35663931F656A1D0070410E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 441FA01B815D8FC7D35F0E99 /* Pods-GameOfLifeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6C2B5VUSRK;
@@ -514,6 +978,7 @@
 				A356638D1F656A1D0070410E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A356638E1F656A1D0070410E /* Build configuration list for PBXNativeTarget "GameOfLifeTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +987,7 @@
 				A35663901F656A1D0070410E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A35663911F656A1D0070410E /* Build configuration list for PBXNativeTarget "GameOfLifeUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +996,7 @@
 				A35663931F656A1D0070410E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

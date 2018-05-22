@@ -1,0 +1,6 @@
+framework module Pods_GameOfLifeTests {
+  umbrella header "Pods-GameOfLifeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
