@@ -16,7 +16,8 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
     var tapGestureCtrl : TapGestureController!
     var fieldCtrl : FieldController!
     
-    var gestureRecognizer : UITapGestureRecognizer!
+    var panRecognizer : UIPanGestureRecognizer!
+    var tapRecognizer : UITapGestureRecognizer!
     
     var cellsPerRowSetup : Int!
     var cellsPerColumnSetup : Int!
@@ -31,8 +32,11 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
         
         setupScrollView()
 
-        gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        scrollView.addGestureRecognizer(gestureRecognizer)
+        panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handleTap))
+        scrollView.addGestureRecognizer(panRecognizer)
+        
+        tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        scrollView.addGestureRecognizer(tapRecognizer)
     }
     
     override func viewDidLayoutSubviews() {
@@ -104,7 +108,7 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
         }
     }
     
-    @objc func handleTap(gesture: UITapGestureRecognizer) {
+    @objc func handleTap(gesture: UIPanGestureRecognizer) {
 
         let location = gesture.location(in: gesture.view)
         
@@ -184,6 +188,7 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
     }
     
     deinit {
-        scrollView.removeGestureRecognizer(gestureRecognizer)
+        scrollView.removeGestureRecognizer(panRecognizer)
+        scrollView.removeGestureRecognizer(tapRecognizer)
     }
 }

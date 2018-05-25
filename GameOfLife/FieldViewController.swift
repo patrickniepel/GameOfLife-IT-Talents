@@ -32,6 +32,8 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
     var currentPace = 4
     var paces : [Float] = [0.01, 0.1, 0.25, 0.5, 1, 2, 4]
     
+    var isRunning = true
+    
     var didLayoutSubviews = false
 
     override func viewDidLoad() {
@@ -190,10 +192,12 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
         if !timer.isValid {
             startTimer()
             runningStatusLabel.text = "Running"
+            isRunning = true
         }
         else {
             timer.invalidate()
             runningStatusLabel.text = "Paused"
+            isRunning = false
         }
     }
     
@@ -205,21 +209,30 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
         }
         //Faster
         currentPace -= 1
-        stopTimer()
-        startTimer()
         updatePaceLabel()
+        
+        //Only toggle Timer when game is running
+        if isRunning {
+            stopTimer()
+            startTimer()
+        }
     }
     
     @IBAction func rewind(_ sender: UIBarButtonItem) {
         
+        //Already at lowest pace
         if currentPace + 1 > paces.count - 1 {
             return
         }
         //Slower
         currentPace += 1
-        stopTimer()
-        startTimer()
         updatePaceLabel()
+        
+        //Only toggle Timer when game is running
+        if isRunning {
+            stopTimer()
+            startTimer()
+        }
     }
     
     deinit {

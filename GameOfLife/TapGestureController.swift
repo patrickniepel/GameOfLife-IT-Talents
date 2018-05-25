@@ -14,6 +14,7 @@ class TapGestureController: NSObject {
     var width : CGFloat  = 0
     var height : CGFloat = 0
     var cellBackGroundColor : UIColor!
+    private var lastTappedCellKey = ""
     
     var tappedCellKeys = [String]()
     
@@ -36,6 +37,11 @@ class TapGestureController: NSObject {
         let key = "\(i)|\(j)"
         let tappedCell = field.cells[key]!
         
+        //User is still on the same cell
+        if (key == lastTappedCellKey) {
+            return
+        }
+        
         
         // Cell has already been selected and gets deselected now
         if tappedCellKeys.contains(key) {
@@ -49,5 +55,7 @@ class TapGestureController: NSObject {
             field.bringSubview(toFront: tappedCell)
             tappedCell.backgroundColor = cellBackGroundColor
         }
+        
+        lastTappedCellKey = key
     }
 }

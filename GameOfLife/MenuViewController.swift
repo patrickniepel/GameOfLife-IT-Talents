@@ -54,12 +54,12 @@ class MenuViewController: UIViewController, GADBannerViewDelegate {
         
         for btn in menuButtons {
             btn.layer.opacity = 0
-            btn.layer.cornerRadius = 10
+            btn.layer.cornerRadius = 15
             
-            btn.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+            btn.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5).cgColor
             btn.layer.shadowOffset = CGSize(width: 0, height: 3)
             btn.layer.shadowOpacity = 1.0
-            btn.layer.shadowRadius = 10.0
+            btn.layer.shadowRadius = 15.0
             btn.layer.masksToBounds = false
         }
     }

@@ -82,22 +82,22 @@ class FieldController: NSObject {
                 
                 let aliveCounter = cellCtrl.checkNeighbours(field: field, x: i, y: j)
                 
-                //Tot und genau 3 nachbarn
+                //Dead and exactly three living neighbours
                 if !field.cells[key]!.isAlive && aliveCounter == 3 {
                     field.cells[key]?.setStateNextTurn(willBeAlive: true)
                 }
                 
-                //Lebend mit  weniger als 2 nachbarn
+                //Alive and less than two living neighbours
                 if field.cells[key]!.isAlive && aliveCounter < 2 {
                     field.cells[key]?.setStateNextTurn(willBeAlive: false)
                 }
                 
-                //Lebend mit 2 oder 3 lebenden nachbarn
+                //Alive and two or three living neighbours
                 if field.cells[key]!.isAlive && (aliveCounter == 2 || aliveCounter == 3) {
                     field.cells[key]?.setStateNextTurn(willBeAlive: true)
                 }
                 
-                //Lebend mit mehr als 3 nachbarn
+                //Alive and more than three living neighbours
                 if field.cells[key]!.isAlive && aliveCounter > 3 {
                     field.cells[key]?.setStateNextTurn(willBeAlive: false)
                 }
