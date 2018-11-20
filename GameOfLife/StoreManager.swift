@@ -23,10 +23,10 @@ class StoreManager: NSObject {
     private override init() {}
     static let sharedInstance = StoreManager()
     
-    let bundleID = "de.patrickniepel.GameOfLife"
-    var removeAd = RegisteredPurchase.removeAd
-    var expandBoard = RegisteredPurchase.expandBoard
-    var productsToRestore : [Purchase] = []
+    private let bundleID = "de.patrickniepel.GameOfLife"
+    private var removeAd = RegisteredPurchase.removeAd
+    private var expandBoard = RegisteredPurchase.expandBoard
+    private var productsToRestore : [Purchase] = []
     var myProductsPrices : [String : String] = [:]
     
 
@@ -60,8 +60,6 @@ class StoreManager: NSObject {
     }
     
     func purchase(purchase: RegisteredPurchase) {
-        print("de.patrickniepel.GameOfLife.RemoveAd")
-        print(bundleID + "." + RegisteredPurchase.removeAd.rawValue)
         NetworkActivityIndicatorManager.networkOperationStarted()
         SwiftyStoreKit.purchaseProduct(bundleID + "." + purchase.rawValue, completion: { result in
             NetworkActivityIndicatorManager.networkOperationFinished()
@@ -195,7 +193,7 @@ extension StoreManager {
     
     func alertForProductRetrievalInfo(result: RetrieveResults) -> UIAlertController {
         if let product = result.retrievedProducts.first {
-            let priceString = product.localizedPrice!
+            let priceString = product.localizedPrice ?? "Error"
             return alertWithTitle(title: product.localizedTitle, message: "\(product.localizedDescription) - \(priceString)")
         }
         else if let invalidProductID = result.invalidProductIDs.first {
@@ -210,40 +208,30 @@ extension StoreManager {
     func alertForPurchaseResult(result: PurchaseResult) -> UIAlertController? {
         switch result {
             
-        case .success(let product):
-            print("Purchase successfull: \(product.productId)")
+        case .success:
             return alertWithTitle(title: "Thank You", message: "Purchase Completed")
             
         case .error(let error):
-            print("Purchase Failed: \(error)")
             
             switch error.code {
                 
             case .unknown:
-                print("Unknown error. Please contact support", error)
                 return alertWithTitle(title: "Purchase Failed", message: "\(error.localizedDescription). Check Your Internet Connection Or Contact Support!")
             case .clientInvalid:
-                print("Not allowed to make the payment", error)
                 return alertWithTitle(title: "Purchase Failed", message: "You Are Not Allowed To Make The Payment!")
             case .paymentCancelled:
                 return nil
             case .paymentInvalid:
-                print("The purchase identifier was invalid", error)
                 return alertWithTitle(title: "Purchase Failed", message: "Try Again Later Or Contact Support!")
             case .paymentNotAllowed:
-                print("The device is not allowed to make the payment", error)
                 return alertWithTitle(title: "Purchase Failed", message: "The Device Is Not Allowed To Make The Payment!")
             case .storeProductNotAvailable:
-                print("The product is not available in the current storefront", error)
                 return alertWithTitle(title: "Purchase Failed", message: "The Product Is Not Available In The Current Storefront!")
             case .cloudServicePermissionDenied:
-                print("Access to cloud service information is not allowed", error)
                 return alertWithTitle(title: "Purchase Failed", message: "Access To Cloud Service Information Is Not Allowed!")
             case .cloudServiceNetworkConnectionFailed:
-                print("Could not connect to the network", error)
                 return alertWithTitle(title: "Purchase Failed", message: "Could Not Connect To The Network!")
             case .cloudServiceRevoked:
-                print("Cloud service revoked", error)
                 return alertWithTitle(title: "Purchase Failed", message: "Cloud Service Was Revoked!")
             }
         }
@@ -251,7 +239,6 @@ extension StoreManager {
     
     func alertForRestorePurchases(result: RestoreResults) -> UIAlertController {
         if result.restoreFailedPurchases.count > 0 {
-            print("Restore failed: \(result.restoreFailedPurchases)")
             return alertWithTitle(title: "Restore Failed", message: "Check Your Internet Connection Or Contact Support!")
         }
         else if result.restoredPurchases.count > 0 {
@@ -267,20 +254,17 @@ extension StoreManager {
     func alertForVerifyReceipt(result: VerifyReceiptResult) -> UIAlertController {
         switch result {
             
-        case .success(let receipt):
-            print("Verify Receipt Success: \(receipt)")
+        case .success:
             return alertWithTitle(title: "Receipt Verified", message: "Receipt Verified Remotely")
             
         case .error(let error):
             
-            print("Verify receipt failed: \(error)")
             
             switch error {
                 
             case .noReceiptData:
                 return alertWithTitle(title: "Receipt Verification", message: "No Receipt Data Found, Application Will Try To Get A New One. Try Again!")
-            case .networkError(let error):
-                print("NetWork Error: \(error)")
+            case .networkError:
                 return alertWithTitle(title: "Receipt Verification", message: "Network Error While Verifying Receipt!")
             default:
                 return alertWithTitle(title: "Receipt Verification", message: "Receipt Verification Failed!")

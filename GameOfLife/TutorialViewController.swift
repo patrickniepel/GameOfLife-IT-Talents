@@ -10,15 +10,15 @@ import UIKit
 
 class TutorialViewController: UIViewController {
     
-    var tutorialCtrl : TutorialController!
-    var dataSource : TutorialDataSource!
-    var delegate : TutorialDelegate!
+    private var tutorialCtrl : TutorialController?
+    private var dataSource : TutorialDataSource?
+    private var delegate : TutorialDelegate?
     
-    var currentPage = 0
-    var totalPages : Int!
+    private var currentPage = 0
+    private var totalPages = 0
     
-    var swipeLeft : UISwipeGestureRecognizer!
-    var swipeRight : UISwipeGestureRecognizer!
+    private var swipeLeft : UISwipeGestureRecognizer?
+    private var swipeRight : UISwipeGestureRecognizer?
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -40,10 +40,14 @@ class TutorialViewController: UIViewController {
     
     func setupGesture() {
         swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
-        swipeLeft.direction = .left
+        swipeLeft?.direction = .left
         
         swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
-        swipeRight.direction = .right
+        swipeRight?.direction = .right
+        
+        guard let swipeLeft = swipeLeft, let swipeRight = swipeRight else {
+            return
+        }
         
         collectionView.addGestureRecognizer(swipeLeft)
         collectionView.addGestureRecognizer(swipeRight)
@@ -60,7 +64,7 @@ class TutorialViewController: UIViewController {
     }
     
     private func setupPageControl() {
-        totalPages = tutorialCtrl.getNumberOfPages()
+        totalPages = tutorialCtrl?.getNumberOfPages() ?? TutorialController().getNumberOfPages()
         pageControl.currentPage = currentPage
         pageControl.numberOfPages = totalPages
     }

@@ -19,14 +19,13 @@ class AlertController: NSObject {
             guard let textField = alert.textFields?.first else { return }
             
             if self.checkTextFieldInput(tf: textField) {
-                generation.name = textField.text!
+                generation.name = textField.text ?? "Default Name"
             }
             else {
                 // Default name
                 generation.name = "Custom Generation"
             }
             PersistencyController().saveUserData(generation: generation)
-            print("saved")
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
@@ -41,7 +40,7 @@ class AlertController: NSObject {
         return alert
     }
     
-    func checkTextFieldInput(tf: UITextField) -> Bool {
+    private func checkTextFieldInput(tf: UITextField) -> Bool {
         guard let text = tf.text else { return false }
         
         if text.trimmingCharacters(in: .whitespaces).count == 0 {

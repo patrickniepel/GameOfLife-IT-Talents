@@ -16,6 +16,8 @@ class PersistencyController: NSObject {
     }
     
     func loadUserData() {
-        UserData.sharedInstance = DataObjectPersistency().loadDataObject()
+        if let userData = DataObjectPersistency().loadDataObject() {
+            UserData.sharedInstance = userData
+        }
     }
 }

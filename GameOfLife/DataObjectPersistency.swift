@@ -13,8 +13,8 @@ class DataObjectPersistency: NSObject {
     private let fileName = "data.plist"
     private let dataKey  = "DataObject"
     
-    func loadDataObject() -> UserData {
-        var item : UserData!
+    func loadDataObject() -> UserData? {
+        var item : UserData?
         let file = dataFileForName(fileName: fileName)
         
         if (!FileManager.default.fileExists(atPath: file)) {
@@ -23,7 +23,7 @@ class DataObjectPersistency: NSObject {
         
         if let data = NSData(contentsOfFile: file) {
             let unarchiver = NSKeyedUnarchiver(forReadingWith: data as Data)
-            item = unarchiver.decodeObject(forKey: dataKey) as! UserData
+            item = unarchiver.decodeObject(forKey: dataKey) as? UserData
             unarchiver.finishDecoding()
         }
         

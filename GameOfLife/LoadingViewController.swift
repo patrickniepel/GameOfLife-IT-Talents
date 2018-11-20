@@ -20,9 +20,9 @@ class LoadingViewController: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     
     var segueDelegate : LoadingSegueDelegate? = nil
-    var dataSource : LoadingDataSource!
-    var delegate : LoadingDelegate!
-    var loadingCtrl : LoadingController!
+    private var dataSource : LoadingDataSource?
+    private var delegate : LoadingDelegate?
+    private var loadingCtrl : LoadingController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +34,8 @@ class LoadingViewController: UIViewController {
         dataSource = LoadingDataSource()
         delegate = LoadingDelegate()
         
-        dataSource.loadingCtrl = loadingCtrl
-        delegate.loadingCtrl = loadingCtrl
+        dataSource?.loadingCtrl = loadingCtrl
+        delegate?.loadingCtrl = loadingCtrl
         
         tableView.dataSource = dataSource
         tableView.delegate = delegate
@@ -50,11 +50,11 @@ class LoadingViewController: UIViewController {
     
     /** Loads chosen generation into the Initial Generation screen */
     func loadFromLoadingScreen(generation: Generation) {
-        segueDelegate!.loadFromLoadingScreen(ctrl: self, generation: generation)
+        segueDelegate?.loadFromLoadingScreen(ctrl: self, generation: generation)
     }
     
     private func closeLoadingScreen() {
-        segueDelegate!.closeFromLoadingScreen(ctrl: self)
+        segueDelegate?.closeFromLoadingScreen(ctrl: self)
     }
 
     @IBAction func close(_ sender: UIButton) {

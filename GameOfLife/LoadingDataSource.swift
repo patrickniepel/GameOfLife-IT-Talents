@@ -10,7 +10,7 @@ import UIKit
 
 class LoadingDataSource: NSObject, UITableViewDataSource {
     
-    var loadingCtrl : LoadingController!
+    var loadingCtrl : LoadingController?
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -18,7 +18,7 @@ class LoadingDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let count = loadingCtrl.getNumberOfGenerations()
+        let count = loadingCtrl?.getNumberOfGenerations() ?? 0
         
         if count == 0 {
             return 1
@@ -28,7 +28,7 @@ class LoadingDataSource: NSObject, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         
-        if loadingCtrl.getNumberOfGenerations() == 0 {
+        if loadingCtrl?.getNumberOfGenerations() == 0 {
             return false
         }
         
@@ -38,31 +38,31 @@ class LoadingDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Default text message will be shown
-        if loadingCtrl.getNumberOfGenerations() == 0 {
+        if loadingCtrl?.getNumberOfGenerations() == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "noLoadingCell", for: indexPath)
             return cell
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "loadingCell", for: indexPath) as! LoadingTableViewCell
-        let generation = loadingCtrl.loadGeneration(row: indexPath.row)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "loadingCell", for: indexPath) as? LoadingTableViewCell
+        let generation = loadingCtrl?.loadGeneration(row: indexPath.row)
         
-        cell.name.text = generation.name
-        cell.boardSizeX = generation.boardSizeX
-        cell.boardSizeY = generation.boardSizeY
-        cell.tappedCells = generation.positions
+        cell?.name.text = generation?.name
+        cell?.boardSizeX = generation?.boardSizeX ?? 0
+        cell?.boardSizeY = generation?.boardSizeY ?? 0
+        cell?.tappedCells = generation?.positions ?? []
         
         //Setup Preview
-        cell.setup()
+        cell?.setup()
         
-        return cell
+        return cell ?? UITableViewCell()
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            loadingCtrl.deleteGeneration(position: indexPath.row)
+            loadingCtrl?.deleteGeneration(position: indexPath.row)
             
-            if loadingCtrl.getNumberOfGenerations() == 0 {
+            if loadingCtrl?.getNumberOfGenerations() == 0 {
                 tableView.reloadRows(at: [indexPath], with: .top)
             }
             else {

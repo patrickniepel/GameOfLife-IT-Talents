@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         //Deliver Content from server, then:
                         SwiftyStoreKit.finishTransaction(purchase.transaction)
                     }
-                    print("purchased: \(purchase)")
                 }
             }
         }
@@ -33,7 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         StoreManager.sharedInstance.getInfoForProducts()
         
         PersistencyController().loadUserData()
-        print(UserData.sharedInstance.generations)
         
         return true
     }

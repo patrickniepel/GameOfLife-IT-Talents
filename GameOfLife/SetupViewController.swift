@@ -14,10 +14,10 @@ class SetupViewController: UIViewController {
     
     @IBOutlet var colorButtons: [UIButton]!
     
-    var delegate : Delegate!
-    var dataSource : DataSource!
+    private var delegate : Delegate?
+    private var dataSource : DataSource?
     
-    var cellBackGroundColor = UIColor.black
+    private var cellBackGroundColor = UIColor.black
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +38,10 @@ class SetupViewController: UIViewController {
         
         if segue.identifier == "setupVC2initialGenerationVC" {
             
-            let destVC = segue.destination as! InitialGenerationViewController
-            destVC.cellsPerRowSetup = delegate.cellsPerRow
-            destVC.cellsPerColumnSetup = delegate.cellsPerColumn
-            destVC.cellBackGroundColorSetup = cellBackGroundColor
+            let destVC = segue.destination as? InitialGenerationViewController
+            destVC?.cellsPerRowSetup = delegate?.cellsPerRow
+            destVC?.cellsPerColumnSetup = delegate?.cellsPerColumn
+            destVC?.cellBackGroundColorSetup = cellBackGroundColor
         }
     }
     
@@ -55,6 +55,6 @@ class SetupViewController: UIViewController {
         }
 
         sender.layer.borderWidth = 2
-        cellBackGroundColor = sender.backgroundColor!
+        cellBackGroundColor = sender.backgroundColor ?? .white
     }
 }

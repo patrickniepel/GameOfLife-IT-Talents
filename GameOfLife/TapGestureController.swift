@@ -10,10 +10,10 @@ import UIKit
 
 class TapGestureController: NSObject {
     
-    var field : Field!
-    var width : CGFloat  = 0
-    var height : CGFloat = 0
-    var cellBackGroundColor : UIColor!
+    private var field : Field?
+    private var width : CGFloat  = 0
+    private var height : CGFloat = 0
+    private var cellBackGroundColor : UIColor = .white
     private var lastTappedCellKey = ""
     
     var tappedCellKeys = [String]()
@@ -25,6 +25,10 @@ class TapGestureController: NSObject {
     
     func manageTargetGesture(location: CGPoint) {
         
+        guard let field = field else {
+            return
+        }
+        
         let cellsPerRow = field.cellsPerRow
         let cellsPerColumn = field.cellsPerColumn
         
@@ -35,24 +39,29 @@ class TapGestureController: NSObject {
         let j = Int(location.y / height)
         
         let key = "\(i)|\(j)"
-        let tappedCell = field.cells[key]!
+        
+        guard let tappedCell = field.cells[key] else {
+            return
+        }
         
         //User is still on the same cell
         if (key == lastTappedCellKey) {
             return
         }
         
-        
         // Cell has already been selected and gets deselected now
         if tappedCellKeys.contains(key) {
             
-            tappedCellKeys.remove(at: tappedCellKeys.index(of: key)!)
-            tappedCell.backgroundColor = .white
+            if let index = tappedCellKeys.index(of: key) {
+                
+                tappedCellKeys.remove(at: index)
+                tappedCell.backgroundColor = .white
+            }
         }
         // Cell hasn't been selected yet
         else {
             tappedCellKeys.append(key)
-            field.bringSubview(toFront: tappedCell)
+            field.bringSubviewToFront(tappedCell)
             tappedCell.backgroundColor = cellBackGroundColor
         }
         

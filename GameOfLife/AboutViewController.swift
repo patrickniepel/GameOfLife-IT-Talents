@@ -24,7 +24,7 @@ class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate
 
     }
     
-    func configureMailController() -> MFMailComposeViewController {
+    private func configureMailController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self
         
@@ -35,14 +35,14 @@ class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate
         return mailComposerVC
     }
     
-    func showMailError() {
+    private func showMailError() {
         let sendMailErrorAlert = UIAlertController(title: "Could not send email", message: "Your device could not send the email", preferredStyle: .alert)
         let dismiss = UIAlertAction(title: "Ok", style: .default, handler: nil)
         sendMailErrorAlert.addAction(dismiss)
         self.present(sendMailErrorAlert, animated: true, completion: nil)
     }
     
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    private func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
     

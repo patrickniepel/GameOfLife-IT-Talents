@@ -32,43 +32,44 @@ class CellController: NSObject {
         let maxX = (x + 1) % cellsPerRow
         let maxY = (y + 1) % cellsPerColumn
         
+        
         // top left
-        if field.cells["\(minX)|\(minY)"]!.isAlive {
+        if let _ = field.cells["\(minX)|\(minY)"]?.isAlive  {
             counter += 1
         }
         
         // left mid
-        if field.cells["\(minX)|\(y)"]!.isAlive {
+        if let _ = field.cells["\(minX)|\(y)"]?.isAlive {
             counter += 1
         }
         
         // bottom left
-        if field.cells["\(minX)|\(maxY)"]!.isAlive {
+        if let _ = field.cells["\(minX)|\(maxY)"]?.isAlive {
             counter += 1
         }
         
         // top mid
-        if field.cells["\(x)|\(minY)"]!.isAlive {
+        if let _ = field.cells["\(x)|\(minY)"]?.isAlive {
             counter += 1
         }
         
         // bottom mid
-        if field.cells["\(x)|\(maxY)"]!.isAlive {
+        if let _ = field.cells["\(x)|\(maxY)"]?.isAlive {
             counter += 1
         }
         
         // top right
-        if field.cells["\(maxX)|\(minY)"]!.isAlive {
+        if let _ = field.cells["\(maxX)|\(minY)"]?.isAlive {
             counter += 1
         }
         
         // right mid
-        if field.cells["\(maxX)|\(y)"]!.isAlive {
+        if let _ = field.cells["\(maxX)|\(y)"]?.isAlive {
             counter += 1
         }
         
         // bottom right
-        if field.cells["\(maxX)|\(maxY)"]!.isAlive {
+        if let _ = field.cells["\(maxX)|\(maxY)"]?.isAlive {
             counter += 1
         }
         

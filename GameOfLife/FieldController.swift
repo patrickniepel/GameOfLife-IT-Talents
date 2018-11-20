@@ -10,16 +10,16 @@ import UIKit
 
 class FieldController: NSObject {
     
-    var field : Field!
-    var width : CGFloat  = 0
-    var height : CGFloat = 0
+    private var field : Field?
+    private var width : CGFloat  = 0
+    private var height : CGFloat = 0
     
     //var tmpCells : [Cell] = []
-    var allCells : [Cell] = []
+    private var allCells : [Cell] = []
     
-    var cellCtrl : CellController!
+    private var cellCtrl : CellController?
     
-    var cellBackGroundColor : UIColor!
+    private var cellBackGroundColor : UIColor = .white
     
     var stepCounter = 0
     
@@ -29,13 +29,17 @@ class FieldController: NSObject {
     }
     
     func setup(cellsPerRow: Int, cellsPerColumn: Int, color: UIColor) {
-        field.cellsPerRow = cellsPerRow
-        field.cellsPerColumn = cellsPerColumn
+        field?.cellsPerRow = cellsPerRow
+        field?.cellsPerColumn = cellsPerColumn
         cellBackGroundColor = color
     }
     
     /** Fills the board with cells */
     func populateField() {
+        
+        guard let field = field else {
+            return
+        }
         
         let cellsPerRow = field.cellsPerRow
         width = field.frame.size.width / CGFloat(cellsPerRow)
@@ -64,12 +68,16 @@ class FieldController: NSObject {
     func colorCells(positions: [String]) {
         
         for pos in positions {
-            field.cells[pos]?.backgroundColor = cellBackGroundColor
+            field?.cells[pos]?.backgroundColor = cellBackGroundColor
         }
     }
     
     /** Sets the next generation of cells */
     func updateField() {
+        
+        guard let field = field else {
+            return
+        }
         
         // check cell states for next generation
         for j in 0..<field.cellsPerColumn {
@@ -80,25 +88,25 @@ class FieldController: NSObject {
                 
                 field.cells[key]?.setAppearance()
                 
-                let aliveCounter = cellCtrl.checkNeighbours(field: field, x: i, y: j)
+                let aliveCounter = cellCtrl?.checkNeighbours(field: field, x: i, y: j) ?? 0
                 
                 //Dead and exactly three living neighbours
-                if !field.cells[key]!.isAlive && aliveCounter == 3 {
+                if let cell = field.cells[key], aliveCounter == 3, !cell.isAlive {
                     field.cells[key]?.setStateNextTurn(willBeAlive: true)
                 }
                 
                 //Alive and less than two living neighbours
-                if field.cells[key]!.isAlive && aliveCounter < 2 {
+                if let cell = field.cells[key], aliveCounter < 2, cell.isAlive {
                     field.cells[key]?.setStateNextTurn(willBeAlive: false)
                 }
                 
                 //Alive and two or three living neighbours
-                if field.cells[key]!.isAlive && (aliveCounter == 2 || aliveCounter == 3) {
+                if let cell = field.cells[key], (aliveCounter == 2 || aliveCounter == 3), cell.isAlive {
                     field.cells[key]?.setStateNextTurn(willBeAlive: true)
                 }
                 
                 //Alive and more than three living neighbours
-                if field.cells[key]!.isAlive && aliveCounter > 3 {
+                if let cell = field.cells[key], aliveCounter > 3, cell.isAlive {
                     field.cells[key]?.setStateNextTurn(willBeAlive: false)
                 }
             }
@@ -142,6 +150,10 @@ class FieldController: NSObject {
     
     /** Sets the first generation after the field was created */
     func setInitialGeneration(initialGenerationPositions: [String]) {
+        
+        guard let field = field else {
+            return
+        }
         
         for pos in initialGenerationPositions {
             

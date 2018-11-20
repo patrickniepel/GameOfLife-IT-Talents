@@ -11,7 +11,6 @@ import GoogleMobileAds
 
 class MenuViewController: UIViewController, GADBannerViewDelegate {
 
-
     @IBOutlet var menuButtons: [UIButton]!
     @IBOutlet weak var bannerView: GADBannerView!
     
@@ -65,7 +64,7 @@ class MenuViewController: UIViewController, GADBannerViewDelegate {
     }
     
     private func animateButtons() {
-        UIView.animate(withDuration: 2, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+        UIView.animate(withDuration: 2, delay: 0, options: UIView.AnimationOptions.curveEaseIn, animations: {
             
             for btn in self.menuButtons {
                 btn.layer.opacity = 100

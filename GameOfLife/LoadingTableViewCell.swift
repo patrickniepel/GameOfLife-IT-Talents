@@ -13,10 +13,10 @@ class LoadingTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var previewView: Field!
     
-    var fieldCtrl : FieldController!
-    var boardSizeX : Int!
-    var boardSizeY : Int!
-    var tappedCells : [String]!
+    private var fieldCtrl : FieldController?
+    var boardSizeX : Int = 0
+    var boardSizeY : Int = 0
+    var tappedCells : [String] = []
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,9 +29,9 @@ class LoadingTableViewCell: UITableViewCell {
     /** Shows a little preview of the saved generation */
     func setup() {
         fieldCtrl = FieldController(fieldView: previewView)
-        fieldCtrl.setup(cellsPerRow: boardSizeX, cellsPerColumn: boardSizeY, color: .black)
-        fieldCtrl.populateField()
-        fieldCtrl.colorCells(positions: tappedCells)
+        fieldCtrl?.setup(cellsPerRow: boardSizeX, cellsPerColumn: boardSizeY, color: .black)
+        fieldCtrl?.populateField()
+        fieldCtrl?.colorCells(positions: tappedCells)
     }
 
 }

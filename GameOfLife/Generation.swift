@@ -32,10 +32,10 @@ class Generation: NSObject, NSCoding {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        name = aDecoder.decodeObject(forKey: nameKey) as! String
+        name = aDecoder.decodeObject(forKey: nameKey) as? String ?? "Default name"
         boardSizeX = aDecoder.decodeInteger(forKey: boardSizeXKey)
         boardSizeY = aDecoder.decodeInteger(forKey: boardSizeYKey)
-        positions = aDecoder.decodeObject(forKey: positionsKey) as! [String]
+        positions = aDecoder.decodeObject(forKey: positionsKey) as? [String] ?? []
         super.init()
     }
     

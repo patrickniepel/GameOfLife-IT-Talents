@@ -13,19 +13,19 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var fieldView: Field!
     
-    var tapGestureCtrl : TapGestureController!
-    var fieldCtrl : FieldController!
+    private var tapGestureCtrl : TapGestureController?
+    private var fieldCtrl : FieldController?
     
-    var panRecognizer : UIPanGestureRecognizer!
-    var tapRecognizer : UITapGestureRecognizer!
+    private var panRecognizer : UIPanGestureRecognizer?
+    private var tapRecognizer : UITapGestureRecognizer?
     
-    var cellsPerRowSetup : Int!
-    var cellsPerColumnSetup : Int!
-    var cellBackGroundColorSetup : UIColor!
+    var cellsPerRowSetup : Int?
+    var cellsPerColumnSetup : Int?
+    var cellBackGroundColorSetup : UIColor?
     
-    var didLayoutSubviews = false
+    private var didLayoutSubviews = false
     
-    var initialGeneration = Generation()
+    private var initialGeneration = Generation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +33,13 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
         setupScrollView()
 
         panRecognizer = UIPanGestureRecognizer(target: self, action: #selector(handleTap))
-        scrollView.addGestureRecognizer(panRecognizer)
-        
         tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        
+        guard let panRecognizer = panRecognizer, let tapRecognizer = tapRecognizer else {
+            return
+        }
+        
+        scrollView.addGestureRecognizer(panRecognizer)
         scrollView.addGestureRecognizer(tapRecognizer)
     }
     
@@ -48,18 +52,15 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
             fieldCtrl = FieldController(fieldView: fieldView)
             setupField()
             
-            tapGestureCtrl = TapGestureController(fieldView: fieldView, color: cellBackGroundColorSetup)
+            tapGestureCtrl = TapGestureController(fieldView: fieldView, color: cellBackGroundColorSetup ?? .white)
             
             didLayoutSubviews = true
-            
-            print(scrollView.frame.height)
-            print(fieldView.frame.height)
         }
     }
     
     private func setupField() {
-        fieldCtrl.setup(cellsPerRow: cellsPerRowSetup, cellsPerColumn: cellsPerColumnSetup, color: cellBackGroundColorSetup)
-        fieldCtrl.populateField()
+        fieldCtrl?.setup(cellsPerRow: cellsPerRowSetup ?? 0, cellsPerColumn: cellsPerColumnSetup ?? 0, color: cellBackGroundColorSetup ?? .white)
+        fieldCtrl?.populateField()
     }
     
     /** View that will be zoomed when pinching */
@@ -98,8 +99,8 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
         setupField()
         
         //Load positions of the loaded generation into the tappedCellKeys for correct further editing
-        tapGestureCtrl.tappedCellKeys = initialGeneration.positions
-        fieldCtrl.colorCells(positions: initialGeneration.positions)
+        tapGestureCtrl?.tappedCellKeys = initialGeneration.positions
+        fieldCtrl?.colorCells(positions: initialGeneration.positions)
     }
     
     private func removeSubviews() {
@@ -117,13 +118,13 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
             return
         }
         
-        tapGestureCtrl.manageTargetGesture(location: location)
+        tapGestureCtrl?.manageTargetGesture(location: location)
     }
     
     @IBAction func startGame(_ sender: UIBarButtonItem) {
         
         //Cannot start the game if there are no cells selected
-        if tapGestureCtrl.tappedCellKeys.count == 0 {
+        if tapGestureCtrl?.tappedCellKeys.count == 0 {
             showAlert()
         }
         else {
@@ -144,7 +145,7 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
     
     @IBAction func saveGeneration(_ sender: UIBarButtonItem) {
         
-        if tapGestureCtrl.tappedCellKeys.count == 0 {
+        if tapGestureCtrl?.tappedCellKeys.count == 0 {
             showAlert()
         }
         else {
@@ -159,12 +160,12 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
     }
     
     private func setupInitialGeneration() -> Generation {
-        let tappedCells = tapGestureCtrl.tappedCellKeys
+        let tappedCells = tapGestureCtrl?.tappedCellKeys
         
         let generationToSave = Generation()
-        generationToSave.boardSizeX = cellsPerRowSetup
-        generationToSave.boardSizeY = cellsPerColumnSetup
-        generationToSave.positions = tappedCells
+        generationToSave.boardSizeX = cellsPerRowSetup ?? 0
+        generationToSave.boardSizeY = cellsPerColumnSetup ?? 0
+        generationToSave.positions = tappedCells ?? []
         
         return generationToSave
     }
@@ -173,21 +174,24 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
         
         if segue.identifier == "initialGenerationVC2fieldVC" {
             
-            let destVC = segue.destination as! FieldViewController
+            let destVC = segue.destination as? FieldViewController
             
             initialGeneration = setupInitialGeneration()
-            destVC.initialGeneration = initialGeneration
-            destVC.cellBackGroundColorSetup = cellBackGroundColorSetup
+            destVC?.initialGeneration = initialGeneration
+            destVC?.cellBackGroundColorSetup = cellBackGroundColorSetup
         }
         
         if segue.identifier == "initialGenerationVC2loadingVC" {
             
-            let destVC = segue.destination as! LoadingViewController
-            destVC.segueDelegate = self
+            let destVC = segue.destination as? LoadingViewController
+            destVC?.segueDelegate = self
         }
     }
     
     deinit {
+        guard let panRecognizer = panRecognizer, let tapRecognizer = tapRecognizer else {
+            return
+        }
         scrollView.removeGestureRecognizer(panRecognizer)
         scrollView.removeGestureRecognizer(tapRecognizer)
     }

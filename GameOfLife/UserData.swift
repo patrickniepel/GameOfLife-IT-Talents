@@ -17,7 +17,6 @@ class UserData: NSObject, NSCoding {
 
     private let generationsKey = "generation"
 
-    
     private override init(){}
     
     required init?(coder aDecoder: NSCoder) {

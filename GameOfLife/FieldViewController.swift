@@ -18,23 +18,23 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
     @IBOutlet weak var runningStatusLabel: UILabel!
     
     // Interstitial Ad
-    var interstitial : GADInterstitial!
+    private var interstitial : GADInterstitial?
     
-    var fieldCtrl : FieldController!
+    private var fieldCtrl : FieldController?
     
-    var timer : Timer!
+    private var timer : Timer?
     
-    var initialGeneration : Generation!
+    var initialGeneration : Generation?
     
-    var cellBackGroundColorSetup : UIColor!
+    var cellBackGroundColorSetup : UIColor?
     
-    var tapGesture : UITapGestureRecognizer!
-    var currentPace = 4
-    var paces : [Float] = [0.01, 0.1, 0.25, 0.5, 1, 2, 4]
+    private var tapGesture : UITapGestureRecognizer?
+    private var currentPace = 4
+    private var paces : [Float] = [0.01, 0.1, 0.25, 0.5, 1, 2, 4]
     
-    var isRunning = true
+    private var isRunning = true
     
-    var didLayoutSubviews = false
+    private var didLayoutSubviews = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +48,10 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
         
         self.navigationItem.backBarButtonItem?.title = "Back"
         tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        
+        guard let tapGesture = tapGesture else {
+            return
+        }
         tapGesture.numberOfTapsRequired = 2
         self.view.addGestureRecognizer(tapGesture)
     }
@@ -61,9 +65,13 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
             
             //Initialize and setup FieldController
             fieldCtrl = FieldController(fieldView: fieldView)
-            fieldCtrl.setup(cellsPerRow: initialGeneration.boardSizeX, cellsPerColumn: initialGeneration.boardSizeY, color: cellBackGroundColorSetup)
-            fieldCtrl.populateField()
-            fieldCtrl.setInitialGeneration(initialGenerationPositions: initialGeneration.positions)
+            
+            if let initialGeneration = initialGeneration {
+                
+                fieldCtrl?.setup(cellsPerRow: initialGeneration.boardSizeX, cellsPerColumn: initialGeneration.boardSizeY, color: cellBackGroundColorSetup ?? .white)
+                fieldCtrl?.populateField()
+                fieldCtrl?.setInitialGeneration(initialGenerationPositions: initialGeneration.positions)
+            }
             
             startTimer()
             
@@ -84,10 +92,10 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
     
     private func setupInterstitialAd() {
         interstitial = GADInterstitial(adUnitID: "ID")
-        interstitial.delegate = self
+        interstitial?.delegate = self
         let request = GADRequest()
         request.testDevices = [kGADSimulatorID, "YourDeviceID"]
-        interstitial.load(request)
+        interstitial?.load(request)
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
@@ -100,14 +108,18 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
     
     func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: TimeInterval(paces[currentPace]), target: self, selector: #selector(handleTimer), userInfo: nil, repeats: true)
+        
+        guard let timer = timer else {
+            return
+        }
         //Timer keeps firing even while zooming
-        RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
+        RunLoop.main.add(timer, forMode: RunLoop.Mode.common)
     }
     
     private func checkIfNextGeneration() {
         
         //OK
-        if fieldCtrl.checkForUpdates() == 0 {
+        if fieldCtrl?.checkForUpdates() == 0 {
             return
         }
         
@@ -115,17 +127,17 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
         stopTimer()
         
         //No cells alive
-        if fieldCtrl.checkForUpdates() == 1 {
+        if fieldCtrl?.checkForUpdates() == 1 {
             alert = UIAlertController(title: "Game Over", message: "No More Cells Alive", preferredStyle: .alert)
         }
         
         //Infinite
-        if fieldCtrl.checkForUpdates() == 2 {
+        if fieldCtrl?.checkForUpdates() == 2 {
             alert = UIAlertController(title: "Game Over", message: "Infinite Loop", preferredStyle: .alert)
         }
         
         //Stays the same
-        if fieldCtrl.checkForUpdates() == 3 {
+        if fieldCtrl?.checkForUpdates() == 3 {
             alert = UIAlertController(title: "Game Over", message: "Evolution Will Not Continue", preferredStyle: .alert)
         }
         
@@ -145,11 +157,10 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
     }
     
     private func showInterstitialAd() {
-        if interstitial.isReady {
+        if let interstitial = interstitial, interstitial.isReady {
             interstitial.present(fromRootViewController: self)
         }
         else {
-            print("Ad wasn't ready")
             self.navigationController?.popToRootViewController(animated: false)
         }
     }
@@ -160,7 +171,6 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
     
     private func updatePaceLabel() {
         let pace = 1 / paces[currentPace]
-        print("Paste", pace)
         
         if pace >= 1 {
             let paceInt = Int(pace * 1) / 1
@@ -174,28 +184,28 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
     private func stopTimer() {
         
         if timer != nil {
-            timer.invalidate()
+            timer?.invalidate()
         }
     }
     
     @objc func handleTimer() {
         checkIfNextGeneration()
-        fieldCtrl.updateField()
+        fieldCtrl?.updateField()
         
         //The step after the last check does not count (this method will be completed -> update + 1 even when timer gets invalidated)
-        stepsLabel.text = "\(fieldCtrl.stepCounter - 1) Step(s)"
+        stepsLabel.text = "\(fieldCtrl?.stepCounter ?? 1 - 1) Step(s)"
     }
     
     /** User double tapped to pause or continue the game */
     @objc func handleTap() {
         
-        if !timer.isValid {
+        if let timer = timer, !timer.isValid {
             startTimer()
             runningStatusLabel.text = "Running"
             isRunning = true
         }
         else {
-            timer.invalidate()
+            timer?.invalidate()
             runningStatusLabel.text = "Paused"
             isRunning = false
         }
@@ -236,6 +246,9 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
     }
     
     deinit {
+        guard let tapGesture = tapGesture else {
+            return
+        }
         self.view.removeGestureRecognizer(tapGesture)
     }
 }

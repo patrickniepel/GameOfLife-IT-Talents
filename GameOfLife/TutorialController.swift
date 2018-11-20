@@ -10,7 +10,7 @@ import UIKit
 
 struct TutorialController {
     
-    let pages : [(UIImage, String)] = [
+    private let pages : [(UIImage, String)] = [
         (#imageLiteral(resourceName: "setup"), "\n\n\"Customize Your Board\""),
         (#imageLiteral(resourceName: "initial"), "\n\n\"Select The Initial Generation By Tapping On The Cells Or Dragging Your Finger\""),
         (#imageLiteral(resourceName: "zoom"), "\n\n\"Zoom In And Out\""),

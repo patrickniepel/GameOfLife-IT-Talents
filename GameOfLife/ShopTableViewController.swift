@@ -12,8 +12,8 @@ class ShopTableViewController: UITableViewController {
 
     let storeManager = StoreManager.sharedInstance
     
-    var removeAd = RegisteredPurchase.removeAd
-    var expandBoard = RegisteredPurchase.expandBoard
+    private var removeAd = RegisteredPurchase.removeAd
+    private var expandBoard = RegisteredPurchase.expandBoard
     
     @IBOutlet weak var removeAdButton: UIButton!
     @IBOutlet weak var expandBoardButton: UIButton!
@@ -96,7 +96,6 @@ class ShopTableViewController: UITableViewController {
     
     /** User wants to remove the ad */
     @IBAction func removeAd(_ sender: UIButton) {
-        print(removeAd.rawValue)
         storeManager.purchase(purchase: removeAd)
     }
     
