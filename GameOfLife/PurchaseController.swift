@@ -9,30 +9,24 @@
 import UIKit
 
 class PurchaseController: NSObject {
-    
     private let adRemovalKey = "adRemoval"
     private let additionalCellsKey = "additionalCells"
-    
+
     func userPurchasedAdRemoval() {
         UserDefaults.standard.set(true, forKey: adRemovalKey)
     }
-    
+
     func didUserPurchaseAdRemoval() -> Bool {
-        
         let didPurchase = UserDefaults.standard.bool(forKey: adRemovalKey)
-        
-        return didPurchase
-    }
-    
-    func userPurchasedAdditionalCells() {
-        UserDefaults.standard.set(true, forKey: additionalCellsKey)
-    }
-    
-    func didUserPurchaseAdditionalCells() -> Bool {
-        
-        let didPurchase = UserDefaults.standard.bool(forKey: additionalCellsKey)
-        
         return didPurchase
     }
 
+    func userPurchasedAdditionalCells() {
+        UserDefaults.standard.set(true, forKey: additionalCellsKey)
+    }
+
+    func didUserPurchaseAdditionalCells() -> Bool {
+        let didPurchase = UserDefaults.standard.bool(forKey: additionalCellsKey)
+        return didPurchase
+    }
 }

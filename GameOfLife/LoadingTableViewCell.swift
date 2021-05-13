@@ -9,14 +9,13 @@
 import UIKit
 
 class LoadingTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var previewView: Field!
-    
-    private var fieldCtrl : FieldController?
-    var boardSizeX : Int = 0
-    var boardSizeY : Int = 0
-    var tappedCells : [String] = []
+
+    private var fieldCtrl: FieldController?
+    var boardSizeX: Int = 0
+    var boardSizeY: Int = 0
+    var tappedCells: [String] = []
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +24,7 @@ class LoadingTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
+
     /** Shows a little preview of the saved generation */
     func setup() {
         fieldCtrl = FieldController(fieldView: previewView)

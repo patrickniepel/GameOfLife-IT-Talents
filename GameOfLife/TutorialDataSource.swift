@@ -9,24 +9,20 @@
 import UIKit
 
 class TutorialDataSource: NSObject, UICollectionViewDataSource {
-    
-    private let tutorialCtrl : TutorialController = TutorialController()
-    
+    private let tutorialCtrl: TutorialController = TutorialController()
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tutorialCtrl.getNumberOfPages()
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tutorialCell", for: indexPath) as? TutorialCollectionViewCell
-        
+
         let tutorialPage = tutorialCtrl.getPageData(for: indexPath.item)
         cell?.tutorialImage.image = tutorialPage.0
         cell?.tutorialText.text = tutorialPage.1
         cell?.setup()
-        
         return cell ?? UICollectionViewCell()
     }
-    
-    
 }

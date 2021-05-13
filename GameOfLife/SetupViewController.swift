@@ -9,49 +9,40 @@
 import UIKit
 
 class SetupViewController: UIViewController {
-    
     @IBOutlet weak var pickerView: UIPickerView!
-    
     @IBOutlet var colorButtons: [UIButton]!
-    
-    private var delegate : Delegate?
-    private var dataSource : DataSource?
-    
+
+    private var delegate: Delegate? // swiftlint:disable:this weak_delegate
+    private var dataSource: DataSource?
     private var cellBackGroundColor = UIColor.black
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         delegate = Delegate()
         pickerView.delegate = delegate
-        
+
         dataSource = DataSource()
         pickerView.dataSource = dataSource
-        
+
         for button in colorButtons {
             button.layer.borderColor = UIColor.white.cgColor
         }
     }
-    
+
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "setupVC2initialGenerationVC" {
-            
             let destVC = segue.destination as? InitialGenerationViewController
             destVC?.cellsPerRowSetup = delegate?.cellsPerRow
             destVC?.cellsPerColumnSetup = delegate?.cellsPerColumn
             destVC?.cellBackGroundColorSetup = cellBackGroundColor
         }
     }
-    
+
     @IBAction func colorTapped(_ sender: UIButton) {
-        
-        for button in colorButtons {
-            
-            if button.layer.borderWidth == 2 {
-                button.layer.borderWidth = 0
-            }
+        for button in colorButtons where button.layer.borderWidth == 2 {
+            button.layer.borderWidth = 0
         }
 
         sender.layer.borderWidth = 2

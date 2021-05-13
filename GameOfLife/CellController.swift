@@ -9,71 +9,67 @@
 import UIKit
 
 class CellController: NSObject {
-    
     func checkNeighbours(field: Field, x: Int, y: Int) -> Int {
-        
         // neighbours of cell at x|y getting checked
-        
+
         let cellsPerRow = field.cellsPerRow
         let cellsPerColumn = field.cellsPerColumn
-        
+
         var counter = 0
-        
+
         var minX = x - 1
         if minX < 0 {
             minX = cellsPerRow - 1
         }
-        
+
         var minY = y - 1
         if minY < 0 {
             minY = cellsPerColumn - 1
         }
-        
+
         let maxX = (x + 1) % cellsPerRow
         let maxY = (y + 1) % cellsPerColumn
-        
-        
+
         // top left
-        if let _ = field.cells["\(minX)|\(minY)"]?.isAlive  {
+        if field.cells["\(minX)|\(minY)"]?.isAlive == true {
             counter += 1
         }
-        
+
         // left mid
-        if let _ = field.cells["\(minX)|\(y)"]?.isAlive {
+        if field.cells["\(minX)|\(y)"]?.isAlive == true {
             counter += 1
         }
-        
+
         // bottom left
-        if let _ = field.cells["\(minX)|\(maxY)"]?.isAlive {
+        if field.cells["\(minX)|\(maxY)"]?.isAlive == true {
             counter += 1
         }
-        
+
         // top mid
-        if let _ = field.cells["\(x)|\(minY)"]?.isAlive {
+        if field.cells["\(x)|\(minY)"]?.isAlive == true {
             counter += 1
         }
-        
+
         // bottom mid
-        if let _ = field.cells["\(x)|\(maxY)"]?.isAlive {
+        if field.cells["\(x)|\(maxY)"]?.isAlive == true {
             counter += 1
         }
-        
+
         // top right
-        if let _ = field.cells["\(maxX)|\(minY)"]?.isAlive {
+        if field.cells["\(maxX)|\(minY)"]?.isAlive == true {
             counter += 1
         }
-        
+
         // right mid
-        if let _ = field.cells["\(maxX)|\(y)"]?.isAlive {
+        if field.cells["\(maxX)|\(y)"]?.isAlive == true {
             counter += 1
         }
-        
+
         // bottom right
-        if let _ = field.cells["\(maxX)|\(maxY)"]?.isAlive {
+        if field.cells["\(maxX)|\(maxY)"]?.isAlive == true {
             counter += 1
         }
-        
+
         return counter
     }
-
 }

@@ -9,15 +9,14 @@
 import UIKit
 
 class LoadingController: NSObject {
-    
     func getNumberOfGenerations() -> Int {
         return UserData.sharedInstance.generations.count
     }
-    
+
     func loadGeneration(row: Int) -> Generation {
         return UserData.sharedInstance.generations[row]
     }
-    
+
     func deleteGeneration(position: Int) {
         UserData.sharedInstance.generations.remove(at: position)
         DataObjectPersistency().saveDataObject(items: UserData.sharedInstance)

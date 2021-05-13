@@ -10,20 +10,19 @@ import UIKit
 
 /** Represents for the saved generations the user created  */
 class UserData: NSObject, NSCoding {
-    
     static var sharedInstance = UserData()
-    
-    var generations : [Generation] = []
+
+    var generations: [Generation] = []
 
     private let generationsKey = "generation"
 
-    private override init(){}
-    
+    private override init() {}
+
     required init?(coder aDecoder: NSCoder) {
         generations = aDecoder.decodeObject(forKey: generationsKey) as? [Generation] ?? []
         super.init()
     }
-    
+
     func encode(with aCoder: NSCoder) {
         aCoder.encode(generations, forKey: generationsKey)
     }

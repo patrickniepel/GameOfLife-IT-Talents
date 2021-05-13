@@ -9,48 +9,42 @@
 import UIKit
 
 class Cell: UIView {
-    
-    //var fieldPosition = [String : Int]()
-    
+    // var fieldPosition = [String : Int]()
     var isAlive = false
-    
-    //Background color if alive
+
+    // Background color if alive
     var color = UIColor.black
-    
     var stateWillChange = false
-    
     private var nextGenerationAlive = false
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.frame = frame
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     func setupForStart() {
         self.backgroundColor = .white
         self.layer.borderWidth = 0.5
         self.layer.borderColor = color.cgColor
     }
-    
+
     func setupForNextGeneration() {
         stateWillChange = isAlive == nextGenerationAlive ? false : true
         isAlive = nextGenerationAlive
     }
-    
-    func setStateNextTurn(willBeAlive : Bool) {
+
+    func setStateNextTurn(willBeAlive: Bool) {
         nextGenerationAlive = willBeAlive
     }
-    
+
     func setAppearance() {
-        
         if isAlive {
             self.backgroundColor = color
-        }
-        else {
+        } else {
             self.backgroundColor = .white
         }
     }

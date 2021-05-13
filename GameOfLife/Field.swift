@@ -9,10 +9,9 @@
 import UIKit
 
 class Field: UIView {
-    
     var cellsPerRow = 0
     var cellsPerColumn = 0
-    
+
     // Key like "x|y"
-    var cells = [String : Cell]()
+    var cells = [String: Cell]()
 }

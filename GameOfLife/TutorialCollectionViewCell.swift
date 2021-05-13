@@ -9,21 +9,20 @@
 import UIKit
 
 class TutorialCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var tutorialImage: UIImageView!
     @IBOutlet weak var tutorialText: UITextView!
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     func setup() {
-        //tutorialImage.layer.borderWidth = 7
+        // tutorialImage.layer.borderWidth = 7
         tutorialImage.layer.borderColor = UIColor.orange.cgColor
-        //tutorialImage.layer.cornerRadius = 10
+        // tutorialImage.layer.cornerRadius = 10
     }
 }

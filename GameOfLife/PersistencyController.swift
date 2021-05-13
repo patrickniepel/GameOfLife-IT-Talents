@@ -9,12 +9,11 @@
 import UIKit
 
 class PersistencyController: NSObject {
-    
     func saveUserData(generation: Generation) {
         UserData.sharedInstance.generations.append(generation)
         DataObjectPersistency().saveDataObject(items: UserData.sharedInstance)
     }
-    
+
     func loadUserData() {
         if let userData = DataObjectPersistency().loadDataObject() {
             UserData.sharedInstance = userData

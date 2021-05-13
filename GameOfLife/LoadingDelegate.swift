@@ -9,22 +9,17 @@
 import UIKit
 
 class LoadingDelegate: NSObject, UITableViewDelegate {
-    
-    var loadingCtrl : LoadingController?
-    
+    var loadingCtrl: LoadingController?
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let generation = loadingCtrl?.loadGeneration(row: indexPath.row)
-        
         let nav = tableView.window?.rootViewController as? UINavigationController
         let topVC = nav?.presentedViewController as? LoadingViewController
-        
+
         guard let generationSafe = generation else {
             return
         }
-        
-        //Start loading the selected generation
+        // Start loading the selected generation
         topVC?.loadFromLoadingScreen(generation: generationSafe)
     }
-
 }
