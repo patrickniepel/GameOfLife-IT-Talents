@@ -52,7 +52,7 @@ class TapGestureController: NSObject {
         // Cell has already been selected and gets deselected now
         if tappedCellKeys.contains(key) {
             
-            if let index = tappedCellKeys.index(of: key) {
+            if let index = tappedCellKeys.firstIndex(of: key) {
                 
                 tappedCellKeys.remove(at: index)
                 tappedCell.backgroundColor = .white

@@ -42,7 +42,7 @@ class AboutViewController: UIViewController, MFMailComposeViewControllerDelegate
         self.present(sendMailErrorAlert, animated: true, completion: nil)
     }
     
-    private func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }
     
