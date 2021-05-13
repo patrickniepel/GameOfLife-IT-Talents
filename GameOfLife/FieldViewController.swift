@@ -7,18 +7,15 @@
 //
 
 import UIKit
-import GoogleMobileAds
 
-class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstitialDelegate {
+class FieldViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var fieldView: Field!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var stepsLabel: UILabel!
     @IBOutlet weak var paceLabel: UILabel!
     @IBOutlet weak var runningStatusLabel: UILabel!
-    
-    // Interstitial Ad
-    private var interstitial : GADInterstitial?
+
     
     private var fieldCtrl : FieldController?
     
@@ -43,7 +40,7 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
         setupBottomToolbar()
         
         if !PurchaseController().didUserPurchaseAdRemoval() {
-            setupInterstitialAd()
+
         }
         
         self.navigationItem.backBarButtonItem?.title = "Back"
@@ -88,14 +85,6 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
     private func setupBottomToolbar() {
         stepsLabel.text = "0 Step(s)"
         paceLabel.text = "x1"
-    }
-    
-    private func setupInterstitialAd() {
-        interstitial = GADInterstitial(adUnitID: "ID")
-        interstitial?.delegate = self
-        let request = GADRequest()
-        request.testDevices = [kGADSimulatorID, "YourDeviceID"]
-        interstitial?.load(request)
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
@@ -144,7 +133,7 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
         let continueAction = UIAlertAction(title: "Continue", style: .default) { action -> Void in
             
             if !PurchaseController().didUserPurchaseAdRemoval() {
-                self.showInterstitialAd()
+                
             }
             else {
                 self.navigationController?.popToRootViewController(animated: false)
@@ -156,18 +145,8 @@ class FieldViewController: UIViewController, UIScrollViewDelegate, GADInterstiti
         self.present(alert, animated: true)
     }
     
-    private func showInterstitialAd() {
-        if let interstitial = interstitial, interstitial.isReady {
-            interstitial.present(fromRootViewController: self)
-        }
-        else {
-            self.navigationController?.popToRootViewController(animated: false)
-        }
-    }
-    
-    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
-        self.navigationController?.popToRootViewController(animated: false)
-    }
+
+
     
     private func updatePaceLabel() {
         let pace = 1 / paces[currentPace]

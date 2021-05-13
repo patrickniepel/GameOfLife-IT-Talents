@@ -43,7 +43,7 @@ class AlertController: NSObject {
     private func checkTextFieldInput(tf: UITextField) -> Bool {
         guard let text = tf.text else { return false }
         
-        if text.trimmingCharacters(in: .whitespaces).count == 0 {
+        if text.trimmingCharacters(in: .whitespaces).isEmpty {
             return false
         }
         return true

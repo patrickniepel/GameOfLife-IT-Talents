@@ -68,7 +68,7 @@ class ShopTableViewController: UITableViewController {
     
     @objc func showAlert(notification: NSNotification) {
         
-        let alert = notification.object as! UIAlertController
+        guard let alert = notification.object as? UIAlertController else { return }
         
         guard let _ = self.presentedViewController else {
             self.present(alert, animated: true)

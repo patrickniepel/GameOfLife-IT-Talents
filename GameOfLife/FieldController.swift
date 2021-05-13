@@ -80,15 +80,15 @@ class FieldController: NSObject {
         }
         
         // check cell states for next generation
-        for j in 0..<field.cellsPerColumn {
+        for column in 0..<field.cellsPerColumn {
             
-            for i in 0..<field.cellsPerRow {
+            for row in 0..<field.cellsPerRow {
                 
-                let key = "\(i)|\(j)"
+                let key = "\(row)|\(column)"
                 
                 field.cells[key]?.setAppearance()
                 
-                let aliveCounter = cellCtrl?.checkNeighbours(field: field, x: i, y: j) ?? 0
+                let aliveCounter = cellCtrl?.checkNeighbours(field: field, x: row, y: column) ?? 0
                 
                 //Dead and exactly three living neighbours
                 if let cell = field.cells[key], aliveCounter == 3, !cell.isAlive {

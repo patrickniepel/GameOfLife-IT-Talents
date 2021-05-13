@@ -7,12 +7,10 @@
 //
 
 import UIKit
-import GoogleMobileAds
 
-class MenuViewController: UIViewController, GADBannerViewDelegate {
+class MenuViewController: UIViewController {
 
     @IBOutlet var menuButtons: [UIButton]!
-    @IBOutlet weak var bannerView: GADBannerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,30 +21,7 @@ class MenuViewController: UIViewController, GADBannerViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        removeBanner()
-    }
-
-    private func removeBanner() {
-        if !PurchaseController().didUserPurchaseAdRemoval() {
-            loadBanner()
-        }
-        else {
-            if bannerView != nil {
-                bannerView.removeFromSuperview()
-            }
-        }
-    }
-    
-    private func loadBanner() {
-        bannerView.adSize = kGADAdSizeBanner
-        bannerView.adUnitID = "ID"
-        bannerView.rootViewController = self
-        bannerView.delegate = self
         
-        //Request
-        let request = GADRequest()
-        request.testDevices = [kGADSimulatorID, "YourDeviceID"]
-        bannerView.load(request)
     }
     
     private func setupButtons() {

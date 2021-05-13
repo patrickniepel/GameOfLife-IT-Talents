@@ -138,7 +138,7 @@ class StoreManager: NSObject {
     func verifyReceipt() {
         NetworkActivityIndicatorManager.networkOperationStarted()
         let appleValidator = AppleReceiptValidator(service: .production)
-        SwiftyStoreKit.verifyReceipt(using: appleValidator, password: sharedSecret, forceRefresh: false) { result in
+        SwiftyStoreKit.verifyReceipt(using: appleValidator, forceRefresh: false) { result in
             NetworkActivityIndicatorManager.networkOperationFinished()
             self.showAlert(alert: self.alertForVerifyReceipt(result: result))
         }
@@ -147,7 +147,7 @@ class StoreManager: NSObject {
     func verifyPurchase(product: RegisteredPurchase) {
         NetworkActivityIndicatorManager.networkOperationStarted()
         let appleValidator = AppleReceiptValidator(service: .production)
-        SwiftyStoreKit.verifyReceipt(using: appleValidator, password: sharedSecret, forceRefresh: false) { result in
+        SwiftyStoreKit.verifyReceipt(using: appleValidator, forceRefresh: false) { result in
             NetworkActivityIndicatorManager.networkOperationFinished()
             
             switch result {
@@ -204,7 +204,8 @@ extension StoreManager {
             return alertWithTitle(title: "Could Not Retrieve Product Info", message: errorString)
         }
     }
-    
+
+    // swiftlint:disable cyclomatic_complexity
     func alertForPurchaseResult(result: PurchaseResult) -> UIAlertController? {
         switch result {
             
@@ -213,8 +214,7 @@ extension StoreManager {
             
         case .error(let error):
             
-            switch error.code {
-                
+            switch error.code { 
             case .unknown:
                 return alertWithTitle(title: "Purchase Failed", message: "\(error.localizedDescription). Check Your Internet Connection Or Contact Support!")
             case .clientInvalid:
@@ -233,15 +233,39 @@ extension StoreManager {
                 return alertWithTitle(title: "Purchase Failed", message: "Could Not Connect To The Network!")
             case .cloudServiceRevoked:
                 return alertWithTitle(title: "Purchase Failed", message: "Cloud Service Was Revoked!")
+            case .privacyAcknowledgementRequired:
+                return nil
+            case .unauthorizedRequestData:
+                return nil
+            case .invalidOfferIdentifier:
+                return nil
+            case .invalidSignature:
+                return nil
+            case .missingOfferParams:
+                return nil
+            case .invalidOfferPrice:
+                return nil
+            case .overlayCancelled:
+                return nil
+            case .overlayInvalidConfiguration:
+                return nil
+            case .overlayTimeout:
+                return nil
+            case .ineligibleForOffer:
+                return nil
+            case .unsupportedPlatform:
+                return nil
+            case .overlayPresentedInBackgroundScene:
+                return nil
             }
         }
     }
     
     func alertForRestorePurchases(result: RestoreResults) -> UIAlertController {
-        if result.restoreFailedPurchases.count > 0 {
+        if !result.restoreFailedPurchases.isEmpty {
             return alertWithTitle(title: "Restore Failed", message: "Check Your Internet Connection Or Contact Support!")
         }
-        else if result.restoredPurchases.count > 0 {
+        else if !result.restoredPurchases.isEmpty {
             
             NotificationCenter.default.post(name: NSNotification.Name("purchasesRestored"), object: nil)
             return alertWithTitle(title: "Purchases Restored", message: "All Purchases Have Been Restored")

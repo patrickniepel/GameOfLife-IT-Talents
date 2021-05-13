@@ -124,7 +124,7 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
     @IBAction func startGame(_ sender: UIBarButtonItem) {
         
         //Cannot start the game if there are no cells selected
-        if tapGestureCtrl?.tappedCellKeys.count == 0 {
+        if tapGestureCtrl?.tappedCellKeys.isEmpty ?? false {
             showAlert()
         }
         else {
@@ -145,7 +145,7 @@ class InitialGenerationViewController: UIViewController, UIScrollViewDelegate, L
     
     @IBAction func saveGeneration(_ sender: UIBarButtonItem) {
         
-        if tapGestureCtrl?.tappedCellKeys.count == 0 {
+        if tapGestureCtrl?.tappedCellKeys.isEmpty ?? false {
             showAlert()
         }
         else {

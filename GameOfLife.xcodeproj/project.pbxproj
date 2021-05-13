@@ -3,19 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D6C2271A317F080EE964850 /* Pods_GameOfLifeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA3117DC98ABFB514C9DF670 /* Pods_GameOfLifeUITests.framework */; };
-		48483EA14812CAD11255A8EA /* Pods_GameOfLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E95C7EEAF9D7C030427C2F /* Pods_GameOfLife.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		A312FA3C1FC0484500CE3ED9 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A312FA3B1FC0484500CE3ED9 /* LoadingViewController.swift */; };
 		A312FA3E1FC0485500CE3ED9 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A312FA3D1FC0485500CE3ED9 /* LoadingTableViewCell.swift */; };
 		A312FA401FC0486A00CE3ED9 /* LoadingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A312FA3F1FC0486A00CE3ED9 /* LoadingDataSource.swift */; };
 		A312FA421FC0487800CE3ED9 /* LoadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A312FA411FC0487800CE3ED9 /* LoadingDelegate.swift */; };
 		A312FA441FC04E0700CE3ED9 /* LoadingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A312FA431FC04E0700CE3ED9 /* LoadingController.swift */; };
-		A31E0F981FAA34C3002C5D5D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A31E0F971FAA34C3002C5D5D /* GoogleService-Info.plist */; };
-		A31E0F9A1FAA34D3002C5D5D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A31E0F991FAA34D3002C5D5D /* GoogleMobileAds.framework */; };
 		A32990DD1FAA568B00E147B9 /* TutorialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32990DC1FAA568B00E147B9 /* TutorialCollectionViewCell.swift */; };
 		A32990DF1FAA56A200E147B9 /* TutorialDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32990DE1FAA56A200E147B9 /* TutorialDataSource.swift */; };
 		A32990E11FAA56C300E147B9 /* TutorialDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32990E01FAA56C300E147B9 /* TutorialDelegate.swift */; };
@@ -39,7 +35,9 @@
 		A35FC9451FBF37E000C20C73 /* Generation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35FC9441FBF37E000C20C73 /* Generation.swift */; };
 		A35FC9471FBF3CA300C20C73 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35FC9461FBF3CA300C20C73 /* AlertController.swift */; };
 		A373C69E1FAB7F24003756BF /* NetworkActivityIndicatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A373C69D1FAB7F24003756BF /* NetworkActivityIndicatorManager.swift */; };
-		A373C6A01FABBC7F003756BF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A373C69F1FABBC7F003756BF /* StoreKit.framework */; };
+		A3760B59264D237B00A0D7D4 /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = A3760B58264D237B00A0D7D4 /* SwiftyStoreKit */; };
+		A3760B5C264D238A00A0D7D4 /* Gestalt in Frameworks */ = {isa = PBXBuildFile; productRef = A3760B5B264D238A00A0D7D4 /* Gestalt */; };
+		A3760B5F264D239600A0D7D4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A3760B5E264D239600A0D7D4 /* SnapKit */; };
 		A37886911F658BFF001C0270 /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37886901F658BFF001C0270 /* CellController.swift */; };
 		A392CF061FB249140056C4DD /* ShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A392CF051FB249140056C4DD /* ShopTableViewController.swift */; };
 		A3B507971F68131700D8C823 /* InitialGenerationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B507961F68131700D8C823 /* InitialGenerationViewController.swift */; };
@@ -53,7 +51,6 @@
 		A3E5C7C61FA2539700787F5B /* KOMTXTB_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3E5C7C41FA2539600787F5B /* KOMTXTB_.ttf */; };
 		A3E5C7C91FA2541500787F5B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E5C7C81FA2541500787F5B /* Extensions.swift */; };
 		A3F4BC851FACB7D9002D524F /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F4BC841FACB7D9002D524F /* StoreManager.swift */; };
-		BBC9EF090EEBEDCC5F06047D /* Pods_GameOfLifeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9408D90FB0C2D69A8F0D7F95 /* Pods_GameOfLifeTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,19 +71,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		30B329B9741938D3822D588D /* Pods-GameOfLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfLife.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfLife/Pods-GameOfLife.debug.xcconfig"; sourceTree = "<group>"; };
-		441FA01B815D8FC7D35F0E99 /* Pods-GameOfLifeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfLifeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfLifeUITests/Pods-GameOfLifeUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4F30B6CE707327BF20F6BD83 /* Pods-GameOfLifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfLifeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfLifeUITests/Pods-GameOfLifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		66E95C7EEAF9D7C030427C2F /* Pods_GameOfLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		699E17464DB830F97B31CA30 /* Pods-GameOfLifeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfLifeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfLifeTests/Pods-GameOfLifeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9408D90FB0C2D69A8F0D7F95 /* Pods_GameOfLifeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfLifeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A312FA3B1FC0484500CE3ED9 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		A312FA3D1FC0485500CE3ED9 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		A312FA3F1FC0486A00CE3ED9 /* LoadingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDataSource.swift; sourceTree = "<group>"; };
 		A312FA411FC0487800CE3ED9 /* LoadingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDelegate.swift; sourceTree = "<group>"; };
 		A312FA431FC04E0700CE3ED9 /* LoadingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingController.swift; sourceTree = "<group>"; };
-		A31E0F971FAA34C3002C5D5D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A31E0F991FAA34D3002C5D5D /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		A32990DC1FAA568B00E147B9 /* TutorialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCollectionViewCell.swift; sourceTree = "<group>"; };
 		A32990DE1FAA56A200E147B9 /* TutorialDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialDataSource.swift; sourceTree = "<group>"; };
 		A32990E01FAA56C300E147B9 /* TutorialDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialDelegate.swift; sourceTree = "<group>"; };
@@ -116,7 +105,6 @@
 		A35FC9441FBF37E000C20C73 /* Generation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generation.swift; sourceTree = "<group>"; };
 		A35FC9461FBF3CA300C20C73 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		A373C69D1FAB7F24003756BF /* NetworkActivityIndicatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkActivityIndicatorManager.swift; sourceTree = "<group>"; };
-		A373C69F1FABBC7F003756BF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A37886901F658BFF001C0270 /* CellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
 		A392CF051FB249140056C4DD /* ShopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableViewController.swift; sourceTree = "<group>"; };
 		A3B507961F68131700D8C823 /* InitialGenerationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialGenerationViewController.swift; sourceTree = "<group>"; };
@@ -130,9 +118,6 @@
 		A3E5C7C41FA2539600787F5B /* KOMTXTB_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KOMTXTB_.ttf; sourceTree = "<group>"; };
 		A3E5C7C81FA2541500787F5B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A3F4BC841FACB7D9002D524F /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
-		C50CC52EE677EFA4BD481021 /* Pods-GameOfLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfLife.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfLife/Pods-GameOfLife.release.xcconfig"; sourceTree = "<group>"; };
-		F148813FCC4C16ED62ADE54C /* Pods-GameOfLifeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameOfLifeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameOfLifeTests/Pods-GameOfLifeTests.release.xcconfig"; sourceTree = "<group>"; };
-		FA3117DC98ABFB514C9DF670 /* Pods_GameOfLifeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameOfLifeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,9 +125,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A373C6A01FABBC7F003756BF /* StoreKit.framework in Frameworks */,
-				A31E0F9A1FAA34D3002C5D5D /* GoogleMobileAds.framework in Frameworks */,
-				48483EA14812CAD11255A8EA /* Pods_GameOfLife.framework in Frameworks */,
+				A3760B59264D237B00A0D7D4 /* SwiftyStoreKit in Frameworks */,
+				A3760B5C264D238A00A0D7D4 /* Gestalt in Frameworks */,
+				A3760B5F264D239600A0D7D4 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +135,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBC9EF090EEBEDCC5F06047D /* Pods_GameOfLifeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,33 +142,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D6C2271A317F080EE964850 /* Pods_GameOfLifeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		325813F41299E83E3B8E4F7A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				30B329B9741938D3822D588D /* Pods-GameOfLife.debug.xcconfig */,
-				C50CC52EE677EFA4BD481021 /* Pods-GameOfLife.release.xcconfig */,
-				699E17464DB830F97B31CA30 /* Pods-GameOfLifeTests.debug.xcconfig */,
-				F148813FCC4C16ED62ADE54C /* Pods-GameOfLifeTests.release.xcconfig */,
-				4F30B6CE707327BF20F6BD83 /* Pods-GameOfLifeUITests.debug.xcconfig */,
-				441FA01B815D8FC7D35F0E99 /* Pods-GameOfLifeUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		A06D457D66680BDC5526D3FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A373C69F1FABBC7F003756BF /* StoreKit.framework */,
-				66E95C7EEAF9D7C030427C2F /* Pods_GameOfLife.framework */,
-				9408D90FB0C2D69A8F0D7F95 /* Pods_GameOfLifeTests.framework */,
-				FA3117DC98ABFB514C9DF670 /* Pods_GameOfLifeUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -196,7 +162,6 @@
 				A356637A1F656A1D0070410E /* GameOfLifeTests */,
 				A35663851F656A1D0070410E /* GameOfLifeUITests */,
 				A35663641F656A1D0070410E /* Products */,
-				325813F41299E83E3B8E4F7A /* Pods */,
 				A06D457D66680BDC5526D3FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -214,8 +179,6 @@
 		A35663651F656A1D0070410E /* GameOfLife */ = {
 			isa = PBXGroup;
 			children = (
-				A31E0F991FAA34D3002C5D5D /* GoogleMobileAds.framework */,
-				A31E0F971FAA34C3002C5D5D /* GoogleService-Info.plist */,
 				A3E5C7C71FA2540800787F5B /* Extensions */,
 				A3E0A1B31FAA50CB00EA2BA6 /* Purchase */,
 				A3B507981F6813B600D8C823 /* Menu */,
@@ -365,18 +328,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A356638B1F656A1D0070410E /* Build configuration list for PBXNativeTarget "GameOfLife" */;
 			buildPhases = (
-				169C3B09D6C68D5A83E6994B /* [CP] Check Pods Manifest.lock */,
 				A356635F1F656A1D0070410E /* Sources */,
 				A35663601F656A1D0070410E /* Frameworks */,
 				A35663611F656A1D0070410E /* Resources */,
-				F26A3E1728E9E7571E34A742 /* [CP] Embed Pods Frameworks */,
-				45535954DFAFADC56E7296FA /* [CP] Copy Pods Resources */,
+				A3760B60264D251D00A0D7D4 /* Swiftlint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GameOfLife;
+			packageProductDependencies = (
+				A3760B58264D237B00A0D7D4 /* SwiftyStoreKit */,
+				A3760B5B264D238A00A0D7D4 /* Gestalt */,
+				A3760B5E264D239600A0D7D4 /* SnapKit */,
+			);
 			productName = GameOfLife;
 			productReference = A35663631F656A1D0070410E /* GameOfLife.app */;
 			productType = "com.apple.product-type.application";
@@ -385,12 +351,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A356638E1F656A1D0070410E /* Build configuration list for PBXNativeTarget "GameOfLifeTests" */;
 			buildPhases = (
-				66120BDCD43716925AC0EA4E /* [CP] Check Pods Manifest.lock */,
 				A35663731F656A1D0070410E /* Sources */,
 				A35663741F656A1D0070410E /* Frameworks */,
 				A35663751F656A1D0070410E /* Resources */,
-				E9FC91B136CDB0A44D516E0F /* [CP] Embed Pods Frameworks */,
-				4790729B4F98E3815E5B73A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -406,12 +369,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A35663911F656A1D0070410E /* Build configuration list for PBXNativeTarget "GameOfLifeUITests" */;
 			buildPhases = (
-				20C12AFBB669C64E8A3CF8CB /* [CP] Check Pods Manifest.lock */,
 				A356637E1F656A1D0070410E /* Sources */,
 				A356637F1F656A1D0070410E /* Frameworks */,
 				A35663801F656A1D0070410E /* Resources */,
-				C85A711F7D75A57D285F8370 /* [CP] Embed Pods Frameworks */,
-				EE60490EA4FA0F0155C3FC32 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -465,10 +425,16 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = A356635A1F656A1D0070410E;
+			packageReferences = (
+				A3760B57264D237B00A0D7D4 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
+				A3760B5A264D238A00A0D7D4 /* XCRemoteSwiftPackageReference "Gestalt" */,
+				A3760B5D264D239600A0D7D4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = A35663641F656A1D0070410E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -491,7 +457,6 @@
 				A356636E1F656A1D0070410E /* Assets.xcassets in Resources */,
 				A3E5C7C51FA2539700787F5B /* KOMTXTT_.ttf in Resources */,
 				A356636C1F656A1D0070410E /* Main.storyboard in Resources */,
-				A31E0F981FAA34C3002C5D5D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,152 +477,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		169C3B09D6C68D5A83E6994B /* [CP] Check Pods Manifest.lock */ = {
+		A3760B60264D251D00A0D7D4 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GameOfLife-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		20C12AFBB669C64E8A3CF8CB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GameOfLifeUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		45535954DFAFADC56E7296FA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 			);
-			name = "[CP] Copy Pods Resources";
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameOfLife/Pods-GameOfLife-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4790729B4F98E3815E5B73A3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameOfLifeTests/Pods-GameOfLifeTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		66120BDCD43716925AC0EA4E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-GameOfLifeTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C85A711F7D75A57D285F8370 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameOfLifeUITests/Pods-GameOfLifeUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E9FC91B136CDB0A44D516E0F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameOfLifeTests/Pods-GameOfLifeTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EE60490EA4FA0F0155C3FC32 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameOfLifeUITests/Pods-GameOfLifeUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F26A3E1728E9E7571E34A742 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-GameOfLife/Pods-GameOfLife-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameOfLife/Pods-GameOfLife-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -857,14 +693,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		A356638C1F656A1D0070410E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30B329B9741938D3822D588D /* Pods-GameOfLife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6C2B5VUSRK;
@@ -875,7 +711,10 @@
 				);
 				INFOPLIST_FILE = GameOfLife/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.patrickniepel.GameOfLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -885,7 +724,6 @@
 		};
 		A356638D1F656A1D0070410E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C50CC52EE677EFA4BD481021 /* Pods-GameOfLife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6C2B5VUSRK;
@@ -896,7 +734,10 @@
 				);
 				INFOPLIST_FILE = GameOfLife/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.patrickniepel.GameOfLife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -906,13 +747,16 @@
 		};
 		A356638F1F656A1D0070410E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 699E17464DB830F97B31CA30 /* Pods-GameOfLifeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 6C2B5VUSRK;
 				INFOPLIST_FILE = GameOfLifeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.patrickniepel.GameOfLifeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -922,13 +766,16 @@
 		};
 		A35663901F656A1D0070410E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F148813FCC4C16ED62ADE54C /* Pods-GameOfLifeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 6C2B5VUSRK;
 				INFOPLIST_FILE = GameOfLifeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.patrickniepel.GameOfLifeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -938,12 +785,15 @@
 		};
 		A35663921F656A1D0070410E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F30B6CE707327BF20F6BD83 /* Pods-GameOfLifeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6C2B5VUSRK;
 				INFOPLIST_FILE = GameOfLifeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.patrickniepel.GameOfLifeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -953,12 +803,15 @@
 		};
 		A35663931F656A1D0070410E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 441FA01B815D8FC7D35F0E99 /* Pods-GameOfLifeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 6C2B5VUSRK;
 				INFOPLIST_FILE = GameOfLifeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = de.patrickniepel.GameOfLifeUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -1006,6 +859,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A3760B57264D237B00A0D7D4 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bizz84/SwiftyStoreKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.16.3;
+			};
+		};
+		A3760B5A264D238A00A0D7D4 /* XCRemoteSwiftPackageReference "Gestalt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/regexident/Gestalt";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+		A3760B5D264D239600A0D7D4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A3760B58264D237B00A0D7D4 /* SwiftyStoreKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3760B57264D237B00A0D7D4 /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
+			productName = SwiftyStoreKit;
+		};
+		A3760B5B264D238A00A0D7D4 /* Gestalt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3760B5A264D238A00A0D7D4 /* XCRemoteSwiftPackageReference "Gestalt" */;
+			productName = Gestalt;
+		};
+		A3760B5E264D239600A0D7D4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3760B5D264D239600A0D7D4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A356635B1F656A1D0070410E /* Project object */;
 }

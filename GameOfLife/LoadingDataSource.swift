@@ -20,7 +20,7 @@ class LoadingDataSource: NSObject, UITableViewDataSource {
         
         let count = loadingCtrl?.getNumberOfGenerations() ?? 0
         
-        if count == 0 {
+        if count == 0 { // swiftlint:disable:this empty_count
             return 1
         }
         return count
